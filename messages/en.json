@@ -1,0 +1,83 @@
+{
+  "meta": {
+    "description": "Track expenses, set monthly budgets and see where your money goes."
+  },
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add",
+    "close": "Close",
+    "retry": "Try again",
+    "genericError": "Something went wrong. Try again in a moment."
+  },
+  "languages": {
+    "en": "English",
+    "es": "Español",
+    "zh": "中文"
+  },
+  "nav": {
+    "label": "Main",
+    "overview": "Overview",
+    "expenses": "Expenses",
+    "income": "Income",
+    "budgets": "Budgets",
+    "insights": "Insights",
+    "shopping": "Shopping list",
+    "assistant": "Assistant",
+    "settings": "Settings"
+  },
+  "shell": {
+    "toggleSidebar": "Toggle sidebar",
+    "previousMonth": "Previous month",
+    "nextMonth": "Next month",
+    "thisMonth": "This month",
+    "addExpense": "Add expense",
+    "account": "Account",
+    "theme": "Theme",
+    "themeLight": "Light",
+    "themeDark": "Dark",
+    "themeSystem": "System",
+    "language": "Language",
+    "signOut": "Sign out"
+  },
+  "auth": {
+    "loginTitle": "Sign in to FundFlow",
+    "loginSubtitle": "Welcome back. Your month is where you left it.",
+    "registerTitle": "Create your FundFlow account",
+    "registerSubtitle": "Track spending, set budgets and see where your money goes.",
+    "name": "Name",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm password",
+    "passwordHint": "At least 8 characters.",
+    "showPassword": "Show password",
+    "hidePassword": "Hide password",
+    "submitLogin": "Sign in",
+    "submitRegister": "Create account",
+    "pendingLogin": "Signing in…",
+    "pendingRegister": "Creating account…",
+    "noAccount": "New to FundFlow?",
+    "createAccount": "Create an account",
+    "haveAccount": "Already have an account?",
+    "signIn": "Sign in",
+    "invalidCredentials": "That email and password don’t match. Check them and try again.",
+    "emailTaken": "An account with this email already exists. Sign in instead."
+  },
+  "validation": {
+    "emailInvalid": "Enter a valid email address, like name@example.com.",
+    "passwordRequired": "Enter your password.",
+    "nameRequired": "Enter your name.",
+    "nameTooLong": "Use 80 characters or fewer.",
+    "passwordTooShort": "Use at least 8 characters.",
+    "passwordTooLong": "Use 72 characters or fewer.",
+    "passwordMismatch": "The passwords don’t match."
+  },
+  "dashboard": {
+    "title": "Overview",
+    "emptyTitle": "Your month starts here",
+    "emptyBody": "Add an expense or set a budget, and this page fills in with where your money is going and how you’re pacing.",
+    "setBudget": "Set a budget"
+  }
+}
