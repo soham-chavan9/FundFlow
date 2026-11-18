@@ -33,6 +33,14 @@ export async function loginAction(
   if (!user || !ok) return { formError: "auth.invalidCredentials", values };
 
   await createSession(user._id.toHexString());
+  // Restore the language this account last chose.
+  if (isLocale(user.locale)) {
+    (await cookies()).set(LOCALE_COOKIE, user.locale, {
+      path: "/",
+      maxAge: 60 * 60 * 24 * 365,
+      sameSite: "lax",
+    });
+  }
   redirect(safeNextPath(formData.get("next")));
 }
 
