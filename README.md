@@ -1,7 +1,6 @@
-
 # FundFlow: Expense Tracking and Budget Management Application
 
-FundFlow is a Web Application designed to help users efficiently manage their expenses, budgets, and shopping lists. 
+FundFlow is a Web Application designed to help users efficiently manage their expenses, budgets, and shopping lists.
 The application provides a seamless user experience with interactive charts, robust state management, and RESTful backend APIs.
 
 ---
@@ -26,6 +25,7 @@ The application provides a seamless user experience with interactive charts, rob
 ## About FundFlow
 
 FundFlow is a **full-stack web application** that allows users to:
+
 - Track their expenses across multiple categories.
 - Create and manage budgets effectively.
 - Visualize spending patterns using interactive charts.
@@ -53,29 +53,27 @@ This application follows industry-standard **Domain-Driven Design (DDD)** princi
 7. **Internationalization (i18n)**:
    - Multilingual support to enhance accessibility.
 
-
 ---
 
 ## Technologies Used
 
-- **Frontend**: 
-   - React.js, Next.js, Redux, Material-UI (@mui/material)
-- **Backend**: 
-   - Node.js, Express.js, MongoDB
-- **Styling**: 
-   - CSS/SCSS Modules
-- **Data Fetching**: 
-   - React Query
-- **Visualization**: 
-   - ECharts
-- **Internationalization**: 
-   - i18next
-- **Notifications**: 
-   - EmailJS, Fugu
+- **Frontend**:
+  - React.js, Next.js, Redux, Material-UI (@mui/material)
+- **Backend**:
+  - Node.js, Express.js, MongoDB
+- **Styling**:
+  - CSS/SCSS Modules
+- **Data Fetching**:
+  - React Query
+- **Visualization**:
+  - ECharts
+- **Internationalization**:
+  - i18next
+- **Notifications**:
+  - EmailJS, Fugu
 - **AI Integration**:
-    - Google Generative AI (@google/generative-ai) (v0.21.0)
-    - Model: gemini-1.5-flash
-
+  - Google Generative AI (@google/generative-ai) (v0.21.0)
+  - Model: gemini-1.5-flash
 
 ---
 
@@ -90,18 +88,21 @@ This application follows industry-standard **Domain-Driven Design (DDD)** princi
 ### Installation
 
 1. Clone the repository:
+
    ```bash
    git clone <repository-url>
    cd <repository-folder>
    ```
 
 2. Install dependencies for the frontend:
+
    ```bash
    cd app
    npm install
    ```
 
 3. Install dependencies for the backend:
+
    ```bash
    cd service
    npm install
@@ -123,6 +124,7 @@ This application follows industry-standard **Domain-Driven Design (DDD)** princi
        ```
 
 5. Start the backend server:
+
    ```bash
    cd service
    npm run dev
@@ -156,7 +158,6 @@ This application follows industry-standard **Domain-Driven Design (DDD)** princi
 5. **Real-Time Features**:
    - Use Fugu-powered real-time collaboration tools and notifications.
    - Google Generative AI for advanced chatbot features,has a time-limited secret key for extended capabilities. The key is part of the free model extension, which may expire after a specified time.
-
 
 ---
 
