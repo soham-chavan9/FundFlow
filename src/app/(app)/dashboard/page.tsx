@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Suspense } from "react";
-import { Plus, ReceiptText } from "lucide-react";
+import { ReceiptText } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { requireUser } from "@/lib/auth/dal";
 import { toMonthKey } from "@/lib/dates";
 import { resolveMonth } from "@/lib/month-param";
+import { AddEntryButton } from "@/components/entries/add-entry-button";
 import { MonthSwitcher } from "@/components/shell/month-switcher";
 import { PageHeader } from "@/components/shell/page-header";
 import { Button } from "@/components/ui/button";
@@ -24,7 +25,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function DashboardPage({ searchParams }: PageProps<"/dashboard">) {
-  await requireUser();
+  const user = await requireUser();
   const t = await getTranslations();
   const month = resolveMonth((await searchParams).month);
 
@@ -34,12 +35,7 @@ export default async function DashboardPage({ searchParams }: PageProps<"/dashbo
         <Suspense>
           <MonthSwitcher month={month} currentMonth={toMonthKey(new Date())} />
         </Suspense>
-        <Button asChild size="sm" className="hidden sm:inline-flex">
-          <Link href="/expenses?new=1">
-            <Plus />
-            {t("shell.addExpense")}
-          </Link>
-        </Button>
+        <AddEntryButton currency={user.currency} />
       </PageHeader>
       <div className="flex flex-1 items-center justify-center p-6">
         <Empty className="max-w-md">
@@ -51,12 +47,7 @@ export default async function DashboardPage({ searchParams }: PageProps<"/dashbo
             <EmptyDescription>{t("dashboard.emptyBody")}</EmptyDescription>
           </EmptyHeader>
           <EmptyContent className="flex-row justify-center gap-2">
-            <Button asChild>
-              <Link href="/expenses?new=1">
-                <Plus />
-                {t("shell.addExpense")}
-              </Link>
-            </Button>
+            <AddEntryButton currency={user.currency} variant="inline" />
             <Button asChild variant="outline">
               <Link href="/budgets">{t("dashboard.setBudget")}</Link>
             </Button>

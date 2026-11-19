@@ -1,4 +1,3 @@
-import { Suspense } from "react";
 import { cookies } from "next/headers";
 import { requireUser } from "@/lib/auth/dal";
 import { AppSidebar } from "@/components/shell/app-sidebar";
@@ -10,10 +9,12 @@ export default async function AppLayout({ children }: { children: React.ReactNod
 
   return (
     <SidebarProvider defaultOpen={sidebarOpen}>
-      {/* useSearchParams inside the sidebar needs a boundary */}
-      <Suspense>
-        <AppSidebar user={user} />
-      </Suspense>
+      {/*
+        No Suspense here: the provider switches to the mobile sheet right after
+        hydration, and a boundary that hydrated later would then mismatch. The
+        layout is dynamic (it reads cookies), so useSearchParams needs none.
+      */}
+      <AppSidebar user={user} />
       <SidebarInset className="md:border md:shadow-[var(--shadow-soft)]">{children}</SidebarInset>
     </SidebarProvider>
   );
