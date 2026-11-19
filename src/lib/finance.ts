@@ -186,14 +186,18 @@ export interface YearlyReport {
   spentCents: number;
   incomeCents: number;
   netCents: number;
-  /** Average spend over the months of the year that have started, or null if none have. */
+  /**
+   * Average spend per month, counted from the first month with any activity
+   * through `throughMonth`. Null when there is no activity yet.
+   */
   averageSpentCents: number | null;
 }
 
 /**
  * Twelve months of spend and income for a year. `throughMonth` is the current
  * month key; later months still appear (as zero) but are left out of the
- * average.
+ * average, and so are months before the first one with any activity, so an
+ * account opened in June isn't averaged over an empty spring.
  */
 export function buildYearlyReport(
   year: number,
@@ -209,7 +213,10 @@ export function buildYearlyReport(
     const incomeCents = incomeByMonth[i].cents;
     return { month, spentCents, incomeCents, netCents: incomeCents - spentCents };
   });
-  const started = rows.filter((r) => r.month <= throughMonth);
+  const firstActive = rows.find((r) => r.spentCents > 0 || r.incomeCents > 0)?.month;
+  const started = firstActive
+    ? rows.filter((r) => r.month >= firstActive && r.month <= throughMonth)
+    : [];
   const spentCents = sumCents(rows.map((r) => r.spentCents));
   const incomeCents = sumCents(rows.map((r) => r.incomeCents));
   return {
