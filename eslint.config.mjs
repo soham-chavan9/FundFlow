@@ -13,7 +13,6 @@ const eslintConfig = defineConfig([
     "build/**",
     "next-env.d.ts",
     // Legacy app, removed at the end of the rebuild.
-    "final-project-logicforce/**",
   ]),
 ]);
 
