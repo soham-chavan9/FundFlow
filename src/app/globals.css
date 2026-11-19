@@ -37,6 +37,9 @@
   --color-chart-3: var(--chart-3);
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
+  --color-chart-spend: var(--chart-spend);
+  --color-chart-income: var(--chart-income);
+  --color-chart-context: var(--chart-context);
 
   --color-sidebar: var(--sidebar);
   --color-sidebar-foreground: var(--sidebar-foreground);
@@ -96,18 +99,32 @@
 
   --chart-1: oklch(0.51 0.19 271);
   --chart-2: oklch(0.74 0.1 271);
-  --chart-3: oklch(0.62 0.02 260);
+  --chart-3: oklch(0.64 0.015 258);
   --chart-4: oklch(0.53 0.12 156);
   --chart-5: oklch(0.74 0.15 72);
 
-  --cat-food: oklch(0.72 0.15 62);
-  --cat-housing: oklch(0.56 0.13 245);
-  --cat-transport: oklch(0.63 0.11 190);
-  --cat-entertainment: oklch(0.57 0.17 302);
-  --cat-medical: oklch(0.64 0.17 355);
-  --cat-selfcare: oklch(0.66 0.13 145);
-  --cat-travel: oklch(0.7 0.11 220);
-  --cat-other: oklch(0.62 0.02 260);
+  /*
+   * Chart series. Spend is the accent; income is the validated aqua; context
+   * marks (other months) are a gray that still clears 3:1 on the card.
+   * Validated with the dataviz palette checks against the card surface.
+   */
+  --chart-spend: oklch(0.51 0.19 271);
+  --chart-income: #1baf7a;
+  --chart-context: oklch(0.64 0.015 258);
+
+  /*
+   * Category identity swatches: the eight steps of the validated reference
+   * palette (passes lightness, chroma, CVD and normal-vision checks on the
+   * card surface). Always shown beside the category name, never alone.
+   */
+  --cat-housing: #2a78d6;
+  --cat-food: #eb6834;
+  --cat-other: #1baf7a;
+  --cat-travel: #eda100;
+  --cat-selfcare: #e87ba4;
+  --cat-transport: #008300;
+  --cat-entertainment: #6250d6;
+  --cat-medical: #e34948;
 
   --sidebar: oklch(0.968 0.006 258);
   --sidebar-foreground: oklch(0.32 0.025 262);
@@ -148,18 +165,23 @@
 
   --chart-1: oklch(0.69 0.155 273);
   --chart-2: oklch(0.5 0.12 273);
-  --chart-3: oklch(0.6 0.02 260);
+  --chart-3: oklch(0.5 0.016 262);
   --chart-4: oklch(0.74 0.14 156);
   --chart-5: oklch(0.8 0.14 76);
 
-  --cat-food: oklch(0.77 0.14 65);
-  --cat-housing: oklch(0.68 0.13 245);
-  --cat-transport: oklch(0.73 0.11 190);
-  --cat-entertainment: oklch(0.7 0.15 302);
-  --cat-medical: oklch(0.72 0.15 355);
-  --cat-selfcare: oklch(0.75 0.13 145);
-  --cat-travel: oklch(0.78 0.1 220);
-  --cat-other: oklch(0.66 0.02 260);
+  /* Dark steps chosen for the dark band (L 0.48-0.67) and 3:1 on the card. */
+  --chart-spend: oklch(0.65 0.16 273);
+  --chart-income: #199e70;
+  --chart-context: oklch(0.5 0.016 262);
+
+  --cat-housing: #3987e5;
+  --cat-food: #d95926;
+  --cat-other: #199e70;
+  --cat-travel: #c98500;
+  --cat-selfcare: #d55181;
+  --cat-transport: #0ca30c;
+  --cat-entertainment: #9085e9;
+  --cat-medical: #e66767;
 
   --sidebar: oklch(0.145 0.012 262);
   --sidebar-foreground: oklch(0.84 0.01 258);
