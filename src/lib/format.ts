@@ -25,14 +25,16 @@ export function formatMonth(
   return standalone ? sentenceCase(raw, locale) : raw;
 }
 
-/** "November", without the year. */
-export function formatMonthName(key: string, locale: string): string {
-  return sentenceCase(
-    new Intl.DateTimeFormat(locale, { month: "long", timeZone: "UTC" }).format(
-      monthRange(key).start,
-    ),
-    locale,
+/** "November", without the year. Sentence case unless used inside a sentence. */
+export function formatMonthName(
+  key: string,
+  locale: string,
+  { standalone = true }: { standalone?: boolean } = {},
+): string {
+  const raw = new Intl.DateTimeFormat(locale, { month: "long", timeZone: "UTC" }).format(
+    monthRange(key).start,
   );
+  return standalone ? sentenceCase(raw, locale) : raw;
 }
 
 /** "Nov", for chart axes. */

@@ -209,5 +209,30 @@
     "outsideBudgets": "{amount} outside budgets",
     "noBudgets": "No budgets set",
     "ofBudgeted": "of {amount} budgeted"
+  },
+  "insights": {
+    "title": "Insights",
+    "period": "Period",
+    "viewMonth": "Month",
+    "viewYear": "Year",
+    "previousYear": "Previous year",
+    "nextYear": "Next year",
+    "income": "Income",
+    "net": "Net",
+    "savingsRate": "Savings rate",
+    "whereHeading": "Where your money went in {month}",
+    "totalChange": "{change} vs {month}",
+    "noSpendTitle": "Nothing spent in {month}",
+    "noSpendBody": "Add expenses to see how they split across categories.",
+    "share": "Share",
+    "budget": "Budget",
+    "vsMonth": "vs {month}",
+    "total": "Total",
+    "new": "New",
+    "flowHeading": "Income and spending, last 6 months",
+    "flowYearHeading": "Income and spending in {year}",
+    "yearSavingsRate": "Kept {rate} of income",
+    "byMonthHeading": "{year} by month",
+    "avgSpend": "Average monthly spend"
   }
 }

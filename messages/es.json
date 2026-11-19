@@ -209,5 +209,30 @@
     "outsideBudgets": "{amount} fuera de presupuesto",
     "noBudgets": "Sin presupuestos",
     "ofBudgeted": "de {amount} presupuestados"
+  },
+  "insights": {
+    "title": "Análisis",
+    "period": "Periodo",
+    "viewMonth": "Mes",
+    "viewYear": "Año",
+    "previousYear": "Año anterior",
+    "nextYear": "Año siguiente",
+    "income": "Ingresos",
+    "net": "Neto",
+    "savingsRate": "Tasa de ahorro",
+    "whereHeading": "A dónde fue tu dinero en {month}",
+    "totalChange": "{change} frente a {month}",
+    "noSpendTitle": "Sin gastos en {month}",
+    "noSpendBody": "Añade gastos para ver cómo se reparten por categoría.",
+    "share": "Proporción",
+    "budget": "Presupuesto",
+    "vsMonth": "vs. {month}",
+    "total": "Total",
+    "new": "Nuevo",
+    "flowHeading": "Ingresos y gastos de los últimos 6 meses",
+    "flowYearHeading": "Ingresos y gastos en {year}",
+    "yearSavingsRate": "Ahorraste el {rate} de tus ingresos",
+    "byMonthHeading": "{year} mes a mes",
+    "avgSpend": "Gasto mensual medio"
   }
 }
