@@ -64,7 +64,8 @@
     "haveAccount": "已有账户？",
     "signIn": "登录",
     "invalidCredentials": "邮箱和密码不匹配，请检查后重试。",
-    "emailTaken": "该邮箱已注册，请直接登录。"
+    "emailTaken": "该邮箱已注册，请直接登录。",
+    "sessionEnded": "你已退出登录，请重新登录以继续。"
   },
   "validation": {
     "emailInvalid": "请输入有效的邮箱地址，例如 name@example.com。",
@@ -81,7 +82,8 @@
     "titleTooLong": "最多 80 个字符。",
     "sourceRequired": "请填写收入来源。",
     "categoryRequired": "请选择类别。",
-    "itemRequired": "请输入物品名称。"
+    "itemRequired": "请输入物品名称。",
+    "passwordUnchanged": "新密码不能与当前密码相同。"
   },
   "dashboard": {
     "title": "概览",
@@ -254,5 +256,32 @@
   "errors": {
     "title": "页面加载失败",
     "body": "服务出了点问题，请稍后再试。"
+  },
+  "settings": {
+    "title": "设置",
+    "profileTitle": "个人资料",
+    "profileBody": "你的名字在 FundFlow 中的显示方式。",
+    "emailFixed": "登录邮箱无法更改。",
+    "profileSaved": "已保存个人资料",
+    "preferencesTitle": "偏好设置",
+    "preferencesBody": "金额显示所用的货币和应用语言。",
+    "currencyNote": "更改货币只会改变金额的货币标签，不会进行换算。",
+    "preferencesSaved": "已保存偏好设置",
+    "passwordTitle": "密码",
+    "passwordBody": "至少 8 个字符。更改后，你的其他设备将退出登录。",
+    "currentPassword": "当前密码",
+    "newPassword": "新密码",
+    "changePassword": "更改密码",
+    "passwordNote": "此设备将保持登录。",
+    "passwordChanged": "密码已更改，其他设备已退出登录。",
+    "wrongPassword": "密码不正确。",
+    "dangerTitle": "删除账户",
+    "dangerBody": "删除你的账户及其中的所有内容。",
+    "deleteSummary": "此操作将永久删除你的支出、收入、预算和购物清单。",
+    "deleteAccount": "删除账户",
+    "deleteTitle": "删除你的账户？",
+    "deleteBody": "你的账户及所有数据将被永久删除，且无法撤销。",
+    "confirmWithPassword": "输入密码以确认",
+    "deleteForever": "永久删除"
   }
 }

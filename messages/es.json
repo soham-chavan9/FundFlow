@@ -64,7 +64,8 @@
     "haveAccount": "¿Ya tienes una cuenta?",
     "signIn": "Inicia sesión",
     "invalidCredentials": "El correo y la contraseña no coinciden. Revísalos e inténtalo de nuevo.",
-    "emailTaken": "Ya existe una cuenta con este correo. Inicia sesión."
+    "emailTaken": "Ya existe una cuenta con este correo. Inicia sesión.",
+    "sessionEnded": "Se cerró tu sesión. Vuelve a iniciar sesión para continuar."
   },
   "validation": {
     "emailInvalid": "Introduce un correo válido, como nombre@ejemplo.com.",
@@ -81,7 +82,8 @@
     "titleTooLong": "Usa 80 caracteres como máximo.",
     "sourceRequired": "Indica de dónde viene el dinero.",
     "categoryRequired": "Elige una categoría.",
-    "itemRequired": "Escribe un artículo."
+    "itemRequired": "Escribe un artículo.",
+    "passwordUnchanged": "Elige una contraseña distinta de la actual."
   },
   "dashboard": {
     "title": "Resumen",
@@ -254,5 +256,32 @@
   "errors": {
     "title": "No se pudo cargar esta página",
     "body": "Algo falló de nuestro lado. Vuelve a intentarlo en un momento."
+  },
+  "settings": {
+    "title": "Ajustes",
+    "profileTitle": "Perfil",
+    "profileBody": "Cómo aparece tu nombre en FundFlow.",
+    "emailFixed": "El correo con el que inicias sesión no se puede cambiar.",
+    "profileSaved": "Perfil guardado",
+    "preferencesTitle": "Preferencias",
+    "preferencesBody": "La moneda en la que se muestran los importes y el idioma de la aplicación.",
+    "currencyNote": "Cambiar la moneda solo cambia la etiqueta de los importes. No los convierte.",
+    "preferencesSaved": "Preferencias guardadas",
+    "passwordTitle": "Contraseña",
+    "passwordBody": "Usa al menos 8 caracteres. Al cambiarla se cierra la sesión en tus otros dispositivos.",
+    "currentPassword": "Contraseña actual",
+    "newPassword": "Contraseña nueva",
+    "changePassword": "Cambiar contraseña",
+    "passwordNote": "Seguirás con la sesión iniciada en este dispositivo.",
+    "passwordChanged": "Contraseña cambiada. Se cerró la sesión en los demás dispositivos.",
+    "wrongPassword": "Esa contraseña no es correcta.",
+    "dangerTitle": "Eliminar cuenta",
+    "dangerBody": "Elimina tu cuenta y todo su contenido.",
+    "deleteSummary": "Esto elimina para siempre tus gastos, ingresos, presupuestos y lista de compras.",
+    "deleteAccount": "Eliminar cuenta",
+    "deleteTitle": "¿Eliminar tu cuenta?",
+    "deleteBody": "Tu cuenta y todos sus datos se eliminarán para siempre. No se puede deshacer.",
+    "confirmWithPassword": "Escribe tu contraseña para confirmar",
+    "deleteForever": "Eliminar para siempre"
   }
 }
