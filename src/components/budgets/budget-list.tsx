@@ -64,6 +64,7 @@ export async function BudgetList({
             </div>
             <BudgetPaceBar
               pace={pace}
+              name={name}
               label={t("budgets.meter", {
                 category: name,
                 spent: money(pace.spentCents),
