@@ -70,7 +70,7 @@ export async function SummaryStrip({
           <dt className="text-muted-foreground text-sm">{cell.label}</dt>
           <dd
             className={cn(
-              "text-xl font-semibold tracking-tight tabular-nums sm:text-2xl",
+              "text-xl font-semibold tracking-tight sm:text-2xl",
               cell.tone === "over" && "text-destructive",
             )}
           >
