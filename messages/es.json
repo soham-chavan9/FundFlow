@@ -195,7 +195,8 @@
     "emptyBody": "Fija un límite mensual para las categorías que quieras vigilar. Cada barra mostrará a qué ritmo gastas.",
     "notBudgeted": "Sin presupuesto",
     "notBudgetedHint": "Este gasto no se compara con ningún límite.",
-    "spentAmount": "{amount} gastados"
+    "spentAmount": "{amount} gastados",
+    "fixedLeft": "Gasto fijo, solo se marca si se pasa · quedan {amount}"
   },
   "summary": {
     "spent": "Gastado",

@@ -195,7 +195,8 @@
     "emptyBody": "为想关注的类别设置每月上限，每条进度条都会显示你的花费节奏。",
     "notBudgeted": "未设预算",
     "notBudgetedHint": "这些类别的支出不受上限约束。",
-    "spentAmount": "已花 {amount}"
+    "spentAmount": "已花 {amount}",
+    "fixedLeft": "固定开支，仅在超出时提醒 · 剩余 {amount}"
   },
   "summary": {
     "spent": "已支出",

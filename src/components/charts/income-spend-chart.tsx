@@ -61,10 +61,11 @@ export function IncomeSpendChart({
         <BarChart
           data={data}
           margin={{ top: 8, right: 8, left: 0, bottom: 0 }}
-          // Size the pair through the category gap rather than maxBarSize, which
-          // would centre each narrowed bar in its own slot and split the pair.
+          // A wide percentage gap made Recharts lay the pair out spent-first
+          // (seen at 58% with six months), so the gap stays moderate and the
+          // 24px cap keeps the bars thin.
           barGap={2}
-          barCategoryGap={data.length > 8 ? "34%" : "58%"}
+          barCategoryGap="34%"
           accessibilityLayer
           onClick={(state) => {
             const i = Number(state?.activeTooltipIndex);
@@ -87,9 +88,9 @@ export function IncomeSpendChart({
               <MoneyTooltip format={(c) => formatMoney(c, currency, locale)} names={names} />
             }
           />
-          {/* Left to right in declaration order, matching the legend. */}
-          <Bar dataKey="income" fill="var(--chart-income)" radius={[4, 4, 0, 0]} />
-          <Bar dataKey="spent" fill="var(--chart-spend)" radius={[4, 4, 0, 0]} />
+          {/* Income left, as in the legend. */}
+          <Bar dataKey="income" fill="var(--chart-income)" radius={[4, 4, 0, 0]} maxBarSize={24} />
+          <Bar dataKey="spent" fill="var(--chart-spend)" radius={[4, 4, 0, 0]} maxBarSize={24} />
         </BarChart>
       </ChartContainer>
     </div>

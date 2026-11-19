@@ -51,7 +51,7 @@ export function SpendTrendChart({
 
   return (
     <ChartContainer
-      config={{ cents: { label: seriesName, color: "var(--chart-spend)" } }}
+      config={{ cents: { label: seriesName, color: "var(--primary)" } }}
       className="aspect-auto h-full min-h-56 w-full flex-1"
       role="figure"
       aria-label={label}
@@ -88,7 +88,7 @@ export function SpendTrendChart({
           {rows.map((d) => (
             <Cell
               key={d.month}
-              fill={d.month === selected ? "var(--chart-spend)" : "var(--chart-context)"}
+              fill={d.month === selected ? "var(--primary)" : "var(--chart-context)"}
             />
           ))}
           <LabelList
