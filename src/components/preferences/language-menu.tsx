@@ -26,7 +26,7 @@ export function LanguageMenu() {
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" size="sm" disabled={pending} aria-label={t("shell.language")}>
           <Languages />
-          <span>{t(`languages.${locale}`)}</span>
+          <span className="max-sm:sr-only">{t(`languages.${locale}`)}</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="min-w-36">

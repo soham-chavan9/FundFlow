@@ -2,6 +2,5 @@
 node_modules
 package-lock.json
 docs/original
-final-project-logicforce
 playwright-report
 test-results
