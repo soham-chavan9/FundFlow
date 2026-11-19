@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+    branches: [main, revamp]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [22, 26]
+    env:
+      MONGODB_URI: mongodb://127.0.0.1:27017
+      MONGODB_DB: fundflow-ci
+      AUTH_SECRET: ci-only-secret-not-used-in-production-000000
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run build
