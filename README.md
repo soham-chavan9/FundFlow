@@ -1,184 +1,107 @@
-# FundFlow: Expense Tracking and Budget Management Application
+# FundFlow
 
-FundFlow is a Web Application designed to help users efficiently manage their expenses, budgets, and shopping lists.
-The application provides a seamless user experience with interactive charts, robust state management, and RESTful backend APIs.
+FundFlow is a personal expense tracker and budget manager. You log what you spend and earn, give each category a monthly limit, and see whether every budget is on track for the days left in the month. Reports break spending down by month and year, and an optional AI assistant answers questions about your own numbers.
 
----
-
-## Table of Contents
-
-- [FundFlow: Expense Tracking and Budget Management Application](#fundflow-expense-tracking-and-budget-management-application)
-  - [Table of Contents](#table-of-contents)
-  - [About FundFlow](#about-fundflow)
-  - [Features](#features)
-  - [Technologies Used](#technologies-used)
-  - [Setup Instructions](#setup-instructions)
-    - [Prerequisites](#prerequisites)
-    - [Installation](#installation)
-  - [Usage](#usage)
-  - [License](#license)
-  - [Contact](#contact)
-  - [Video Presentation Link:](#video-presentation-link)
-
----
-
-## About FundFlow
-
-FundFlow is a **full-stack web application** that allows users to:
-
-- Track their expenses across multiple categories.
-- Create and manage budgets effectively.
-- Visualize spending patterns using interactive charts.
-- Maintain and manage shopping lists.
-
-This application follows industry-standard **Domain-Driven Design (DDD)** principles and implements RESTful APIs using **Express.js** and **MongoDB**.
-
----
+It works in English, Spanish and Simplified Chinese, in light and dark mode, on phones and desktops.
 
 ## Features
 
-1. **Expense Management**:
-   - Log, view, update, and delete expenses.
-2. **Budget Management**:
-   - Define monthly budgets for various categories.
-   - Monitor spending and receive alerts for overspending.
-3. **Data Visualization**:
-   - View expense breakdowns using bar and pie charts.
-4. **Shopping List**:
-   - Create and maintain a shopping list with itemized tracking.
-5. **Fugu Capabilities : AI Chatbot**:
-   - Incorporated advanced **Fugu capabilities** to enhance real-time collaboration, notifications, and user communication within the application .
-6. **State Management**:
-   - Implemented using Redux for efficient data flow.
-7. **Internationalization (i18n)**:
-   - Multilingual support to enhance accessibility.
+- **Expenses and income.** Add, edit and delete entries from any screen. Search, filter by category, sort, page through, and export a month to CSV. Amounts can be typed as `12.50` or `12,50`.
+- **Budgets that know what day it is.** Each category gets a monthly limit. A line on its bar marks where spending should be today. A budget running ahead of the month turns amber, and one that's over turns red. Fixed bills like rent are only flagged when they go over. Last month's limits can be copied in one click.
+- **Overspend warnings.** Saving an expense that pushes a category over its limit shows a warning straight away.
+- **Overview.** Spent, budgeted, what's left and the day of the month; budget bars; a six-month trend; recent expenses.
+- **Insights.** A monthly report by category compared with last month and your budget, income against spending, and a yearly month-by-month report.
+- **Assistant.** Ask questions like "Which budget is most at risk?". Google Gemini answers from a summary of your last three months, in your language. Nothing is stored.
+- **Shopping list** with instant check-off.
+- **Settings.** Name, currency, language, password change (signs out your other devices) and account deletion.
 
----
+## Stack
 
-## Technologies Used
+- [Next.js 16](https://nextjs.org) (App Router, Server Components, Server Actions, Turbopack), React 19, TypeScript
+- Tailwind CSS v4 and [shadcn/ui](https://ui.shadcn.com) (Radix), Recharts, lucide icons
+- MongoDB (official Node driver), zod validation
+- Sessions as signed HS256 JWT cookies (`jose`), passwords hashed with bcrypt
+- [next-intl](https://next-intl.dev) for translations
+- `@google/genai` for the assistant
+- Vitest for unit tests, Playwright for end-to-end tests, GitHub Actions CI
 
-- **Frontend**:
-  - React.js, Next.js, Redux, Material-UI (@mui/material)
-- **Backend**:
-  - Node.js, Express.js, MongoDB
-- **Styling**:
-  - CSS/SCSS Modules
-- **Data Fetching**:
-  - React Query
-- **Visualization**:
-  - ECharts
-- **Internationalization**:
-  - i18next
-- **Notifications**:
-  - EmailJS, Fugu
-- **AI Integration**:
-  - Google Generative AI (@google/generative-ai) (v0.21.0)
-  - Model: gemini-1.5-flash
+## Getting started
 
----
+You need Node.js 20.9 or newer, and Docker (or any MongoDB 7 you can reach).
 
-## Setup Instructions
+```bash
+git clone https://github.com/soham-chavan9/FundFlow.git
+cd FundFlow
+npm ci
+docker compose up -d          # MongoDB on 127.0.0.1:27017
+cp .env.example .env.local    # then set AUTH_SECRET (see below)
+npm run dev                   # http://localhost:3000
+```
 
-### Prerequisites
+Generate a session secret and paste it into `.env.local`:
 
-1. **Node.js**: Version 14 or higher.
-2. **Database**: MongoDB (local or cloud-based).
-3. **Package Manager**: npm or yarn.
+```bash
+openssl rand -base64 32
+```
 
-### Installation
+### Environment variables
 
-1. Clone the repository:
+| Variable         | Required | What it does                                                                                                                                    |
+| ---------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| `MONGODB_URI`    | yes      | MongoDB connection string. `mongodb://127.0.0.1:27017` with the bundled `docker-compose.yml`.                                                   |
+| `MONGODB_DB`     | no       | Database name. Defaults to `fundflow`.                                                                                                          |
+| `AUTH_SECRET`    | yes      | Signs session cookies. At least 32 characters.                                                                                                  |
+| `GEMINI_API_KEY` | no       | Turns on the assistant. Get one at [Google AI Studio](https://aistudio.google.com/apikey). Without it, the assistant page says it isn't set up. |
+| `GEMINI_MODEL`   | no       | Overrides the Gemini model. Defaults to `gemini-4-hydrogen`.                                                                                    |
 
-   ```bash
-   git clone <repository-url>
-   cd <repository-folder>
-   ```
+## Scripts
 
-2. Install dependencies for the frontend:
+| Command                       | What it does                                         |
+| ----------------------------- | ---------------------------------------------------- |
+| `npm run dev`                 | Development server                                   |
+| `npm run build` / `npm start` | Production build and server                          |
+| `npm run lint`                | ESLint                                               |
+| `npm run typecheck`           | Generates route types, then runs `tsc`               |
+| `npm test`                    | Unit tests (Vitest)                                  |
+| `npm run test:e2e`            | End-to-end tests (Playwright; needs MongoDB running) |
+| `npm run format`              | Prettier                                             |
 
-   ```bash
-   cd app
-   npm install
-   ```
+## How it's built
 
-3. Install dependencies for the backend:
+```
+src/
+  app/            routes: (auth) sign-in and registration, (app) the signed-in screens,
+                  api/assistant (streaming chat), and the landing page
+  components/     UI by feature (entries, budgets, charts, settings, assistant, landing) plus shadcn/ui
+  lib/            pure logic with unit tests: money, dates, budget pace, reports, CSV, validation
+  server/         database reads, Server Actions and the Gemini client (server-only)
+  i18n/           locale resolution and message types
+messages/         en.json, es.json, zh.json
+e2e/              Playwright tests
+```
 
-   ```bash
-   cd service
-   npm install
-   ```
+Some decisions worth knowing:
 
-4. Configure environment variables:
-   - Create `.env` files in both `app` and `service` directories.
-   - Add the following variables:
-     - For backend (`service/.env`):
-       ```env
-       PORT=9000
-       MONGO_URI=<your-mongo-db-uri>
-       JWT_SECRET=<your-secret>
-       FUGU_API_KEY=<your-fugu-api-key>
-       ```
-     - For frontend (`app/.env`):
-       ```env
-       REACT_APP_API_URL=http://localhost:9000
-       ```
+- **Money is stored in integer cents.** Amounts are parsed from text, never through floating point. Totals and reports are computed in pure functions with unit tests.
+- **Every read and write is scoped to the signed-in user.** The user id always comes from the session cookie on the server, never from the browser. `proxy.ts` handles redirects for signed-out visitors, and every page and action checks the session again.
+- **Session cookies are httpOnly, SameSite=Lax, and Secure in production.** Changing your password bumps a session version that signs out every other device.
+- **CSV export guards against formula injection.** Assistant prompts keep your data in a fenced block that user-entered text can't break out of, and the assistant is rate-limited per user.
+- **Translations are checked by a test.** A missing key or a dropped placeholder in Spanish or Chinese fails CI.
 
-5. Start the backend server:
+## Testing
 
-   ```bash
-   cd service
-   npm run dev
-   ```
+```bash
+npm test                         # unit tests
+npx playwright install chromium  # once
+npm run test:e2e                 # builds, starts on port 3100 and runs the browser tests
+```
 
-6. Start the frontend:
-   ```bash
-   cd app
-   npm start
-   ```
+CI runs lint, typecheck, unit tests, the production build and the end-to-end tests on Node 22 and 26.
 
----
+## History
 
-## Usage
-
-1. **Access the Application**:
-   - Open the frontend application in your browser at `http://localhost:3000`.
-
-2. **Navigate Through Routes**:
-   - **Home Dashboard**: `http://localhost:3000/home`
-   - **Budget Management**: `http://localhost:3000/budget`
-   - **Expense Visualizations**: `http://localhost:3000/charts`
-   - **Shopping List**: `http://localhost:3000/shoppinglist`
-
-3. **Perform CRUD Operations**:
-   - Add, update, and delete budgets, expenses, and shopping list items.
-
-4. **Internationalization**:
-   - Switch the application language from the settings menu.
-
-5. **Real-Time Features**:
-   - Use Fugu-powered real-time collaboration tools and notifications.
-   - Google Generative AI for advanced chatbot features,has a time-limited secret key for extended capabilities. The key is part of the free model extension, which may expire after a specified time.
-
----
+FundFlow started as a team project for INFO 6150 at Northeastern University, built by Team LogicForce. This version is a full rebuild on a current stack, with a fixed security model, a new interface and a working assistant. The original course materials are in [`docs/original`](docs/original).
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
-
----
-
-## Contact
-
-For any queries or contributions, feel free to reach out:
-
-- **Developer**: Team FundFlow
-- **Email**: [fundflow23@gmail.com]
-- **GitHub**: (https://github.com/info-6150-fall-2024/final-project-logicforce.git)
-
----
-
-## Video Presentation Link:
-
-https://northeastern-my.sharepoint.com/:v:/r/personal/chavan_soha_northeastern_edu/Documents/FundFlow.mp4?csf=1&web=1&e=ruFTDp&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D
-
-Enjoy using **FundFlow** for efficient expense and budget management! 🚀
+[MIT](LICENSE)
