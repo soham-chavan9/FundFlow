@@ -64,7 +64,8 @@
     "haveAccount": "Already have an account?",
     "signIn": "Sign in",
     "invalidCredentials": "That email and password don’t match. Check them and try again.",
-    "emailTaken": "An account with this email already exists. Sign in instead."
+    "emailTaken": "An account with this email already exists. Sign in instead.",
+    "sessionEnded": "You’ve been signed out. Sign in again to continue."
   },
   "validation": {
     "emailInvalid": "Enter a valid email address, like name@example.com.",
@@ -81,7 +82,8 @@
     "titleTooLong": "Use 80 characters or fewer.",
     "sourceRequired": "Enter where the money came from.",
     "categoryRequired": "Choose a category.",
-    "itemRequired": "Enter an item."
+    "itemRequired": "Enter an item.",
+    "passwordUnchanged": "Choose a password different from your current one."
   },
   "dashboard": {
     "title": "Overview",
@@ -254,5 +256,32 @@
   "errors": {
     "title": "This page couldn’t load",
     "body": "Something went wrong on our side. Try again in a moment."
+  },
+  "settings": {
+    "title": "Settings",
+    "profileTitle": "Profile",
+    "profileBody": "How your name appears in FundFlow.",
+    "emailFixed": "Your sign-in email can’t be changed.",
+    "profileSaved": "Profile saved",
+    "preferencesTitle": "Preferences",
+    "preferencesBody": "The currency amounts are shown in and the language of the app.",
+    "currencyNote": "Changing the currency relabels your amounts. It doesn’t convert them.",
+    "preferencesSaved": "Preferences saved",
+    "passwordTitle": "Password",
+    "passwordBody": "Use at least 8 characters. Changing it signs you out on your other devices.",
+    "currentPassword": "Current password",
+    "newPassword": "New password",
+    "changePassword": "Change password",
+    "passwordNote": "You’ll stay signed in on this device.",
+    "passwordChanged": "Password changed. Other devices were signed out.",
+    "wrongPassword": "That password isn’t right.",
+    "dangerTitle": "Delete account",
+    "dangerBody": "Removes your account and everything in it.",
+    "deleteSummary": "This permanently deletes your expenses, income, budgets and shopping list.",
+    "deleteAccount": "Delete account",
+    "deleteTitle": "Delete your account?",
+    "deleteBody": "Your account and all of its data will be deleted for good. This can’t be undone.",
+    "confirmWithPassword": "Enter your password to confirm",
+    "deleteForever": "Delete forever"
   }
 }
