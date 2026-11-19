@@ -36,6 +36,7 @@ import {
 import { Spinner } from "@/components/ui/spinner";
 import { Textarea } from "@/components/ui/textarea";
 import { CategoryDot } from "./category-dot";
+import { DateField } from "./date-field";
 import { MoneyInput } from "./money-input";
 
 type Entry = ExpenseRow | IncomeRow;
@@ -200,12 +201,12 @@ function EntryForm({
           </Field>
           <Field data-invalid={!!err.date || undefined}>
             <FieldLabel htmlFor="entry-date">{t("entries.date")}</FieldLabel>
-            <Input
-              type="date"
-              {...fieldProps("date")}
+            <DateField
+              id="entry-date"
+              name="date"
               defaultValue={entry?.date ?? today}
-              className="tabular-nums"
-              required
+              invalid={!!err.date}
+              describedBy={err.date ? "entry-date-error" : undefined}
             />
             {fieldError("date")}
           </Field>
