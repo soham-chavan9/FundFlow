@@ -234,5 +234,25 @@
     "yearSavingsRate": "留存了 {rate} 的收入",
     "byMonthHeading": "{year} 年逐月明细",
     "avgSpend": "月均支出"
+  },
+  "shopping": {
+    "title": "购物清单",
+    "addLabel": "添加物品",
+    "addPlaceholder": "添加物品，例如：牛奶",
+    "add": "添加",
+    "toBuy": "待购",
+    "remaining": "{count, plural, =0 {都买齐了} other {还剩 # 件}}",
+    "allBought": "都买齐了。",
+    "completedHeading": "已购",
+    "clearCompleted": "清除（{count}）",
+    "cleared": "{count, plural, =0 {没有可清除的物品} other {已清除 # 件}}",
+    "deleteItem": "删除{name}",
+    "emptyTitle": "清单是空的",
+    "emptyBody": "添加需要购买的物品，买到后勾选即可。",
+    "full": "清单已满，请先清除一些已购物品。"
+  },
+  "errors": {
+    "title": "页面加载失败",
+    "body": "服务出了点问题，请稍后再试。"
   }
 }

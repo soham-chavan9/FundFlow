@@ -234,5 +234,25 @@
     "yearSavingsRate": "Kept {rate} of income",
     "byMonthHeading": "{year} by month",
     "avgSpend": "Average monthly spend"
+  },
+  "shopping": {
+    "title": "Shopping list",
+    "addLabel": "Add an item",
+    "addPlaceholder": "Add an item, e.g. Milk",
+    "add": "Add",
+    "toBuy": "To buy",
+    "remaining": "{count, plural, =0 {Nothing left} one {# left} other {# left}}",
+    "allBought": "Everything’s bought.",
+    "completedHeading": "Bought",
+    "clearCompleted": "Clear ({count})",
+    "cleared": "{count, plural, =0 {Nothing to clear} one {Cleared # item} other {Cleared # items}}",
+    "deleteItem": "Delete {name}",
+    "emptyTitle": "Your list is empty",
+    "emptyBody": "Add what you need to buy and check items off as you go.",
+    "full": "Your list is full. Clear some bought items first."
+  },
+  "errors": {
+    "title": "This page couldn’t load",
+    "body": "Something went wrong on our side. Try again in a moment."
   }
 }
