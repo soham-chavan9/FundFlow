@@ -54,6 +54,16 @@ openssl rand -base64 32
 | `GEMINI_API_KEY` | no       | Turns on the assistant. Get one at [Google AI Studio](https://aistudio.google.com/apikey). Without it, the assistant page says it isn't set up. |
 | `GEMINI_MODEL`   | no       | Overrides the Gemini model. Defaults to `gemini-4-hydrogen`.                                                                                    |
 
+### Demo account
+
+To present FundFlow with real-looking data, register an account in the app, put its email in `.env.local` as `DEMO_EMAIL`, and run:
+
+```bash
+npm run demo:seed -- --yes
+```
+
+This fills that account with six months of expenses, income, budgets and a shopping list, dated up to today. The current month always looks live: rent is paid, one budget is over, one is ahead of pace, and the rest are on track. Run it again before each presentation to move the data up to the new date. It replaces only that account's entries; the name, password, currency and language stay as they are.
+
 ## Scripts
 
 | Command                       | What it does                                         |
