@@ -10,7 +10,8 @@
     "typecheck": "next typegen && tsc --noEmit",
     "test": "vitest run --passWithNoTests",
     "test:e2e": "playwright test",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "demo:seed": "node --env-file=.env.local scripts/demo-seed.mjs"
   },
   "dependencies": {
     "@google/genai": "^3.6.0",
