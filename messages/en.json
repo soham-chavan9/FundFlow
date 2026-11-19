@@ -283,5 +283,26 @@
     "deleteBody": "Your account and all of its data will be deleted for good. This can’t be undone.",
     "confirmWithPassword": "Enter your password to confirm",
     "deleteForever": "Delete forever"
+  },
+  "assistant": {
+    "title": "Assistant",
+    "name": "FundFlow assistant",
+    "you": "You",
+    "introTitle": "Ask about your money",
+    "introBody": "Questions about your spending, income and budgets are answered from your last three months in FundFlow.",
+    "suggestion1": "How much have I spent on food this month?",
+    "suggestion2": "Which budget is most at risk?",
+    "suggestion3": "How does this month compare with last month?",
+    "inputLabel": "Your question",
+    "placeholder": "Ask about your spending…",
+    "send": "Send",
+    "stop": "Stop",
+    "thinking": "Thinking…",
+    "failed": "The assistant couldn’t answer just now. Try again.",
+    "rateLimited": "That’s a lot of questions in a short time. Try again in a few minutes.",
+    "signedOut": "Your session ended. Sign in again to keep asking.",
+    "privacy": "Answers use totals from your last three months, sent to Google Gemini. Conversations aren’t saved.",
+    "notConfiguredTitle": "The assistant isn’t set up",
+    "notConfiguredBody": "This server has no Gemini API key, so the assistant is off. Add GEMINI_API_KEY to the environment to turn it on."
   }
 }
