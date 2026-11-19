@@ -209,5 +209,30 @@
     "outsideBudgets": "{amount} 不在预算内",
     "noBudgets": "未设置预算",
     "ofBudgeted": "预算 {amount}"
+  },
+  "insights": {
+    "title": "分析",
+    "period": "时间范围",
+    "viewMonth": "月",
+    "viewYear": "年",
+    "previousYear": "上一年",
+    "nextYear": "下一年",
+    "income": "收入",
+    "net": "结余",
+    "savingsRate": "储蓄率",
+    "whereHeading": "{month}的钱花在了哪里",
+    "totalChange": "较{month} {change}",
+    "noSpendTitle": "{month}没有支出",
+    "noSpendBody": "添加支出后即可查看各类别的占比。",
+    "share": "占比",
+    "budget": "预算",
+    "vsMonth": "较{month}",
+    "total": "合计",
+    "new": "新增",
+    "flowHeading": "近 6 个月收入与支出",
+    "flowYearHeading": "{year} 年收入与支出",
+    "yearSavingsRate": "留存了 {rate} 的收入",
+    "byMonthHeading": "{year} 年逐月明细",
+    "avgSpend": "月均支出"
   }
 }
