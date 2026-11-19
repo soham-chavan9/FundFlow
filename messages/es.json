@@ -40,7 +40,8 @@
     "themeDark": "Oscuro",
     "themeSystem": "Sistema",
     "language": "Idioma",
-    "signOut": "Cerrar sesión"
+    "signOut": "Cerrar sesión",
+    "menu": "Menú"
   },
   "auth": {
     "loginTitle": "Inicia sesión en FundFlow",
@@ -158,6 +159,45 @@
   "budgets": {
     "overspendTitle": "{category} supera el presupuesto en {amount}",
     "overspendBody": "{done}. El presupuesto de {month} es {limit}.",
-    "view": "Ver presupuestos"
+    "view": "Ver presupuestos",
+    "title": "Presupuestos",
+    "set": "Fijar",
+    "setFor": "Fijar un presupuesto para {category}",
+    "editFor": "Editar el presupuesto de {category}",
+    "limitFor": "Límite mensual de {category}",
+    "remove": "Quitar",
+    "saved": "Presupuesto de {category} guardado",
+    "removed": "Presupuesto de {category} quitado",
+    "left": "Quedan {amount}",
+    "aheadLeft": "Gasto adelantado · quedan {amount}",
+    "overBy": "Excedido en {amount}",
+    "of": "de",
+    "meter": "{category}: {spent} gastados de {limit}. {status}.",
+    "copyTitle": "Empieza con el mes anterior",
+    "copyBody": "{count, plural, one {Copia el presupuesto que fijaste para {month}.} other {Copia los # presupuestos que fijaste para {month}.}}",
+    "copyAction": "Copiar presupuestos",
+    "copied": "{count, plural, =0 {No hay nada nuevo que copiar} one {Se copió # presupuesto} other {Se copiaron # presupuestos}}",
+    "budgetedHeading": "Presupuestos de {month}",
+    "paceLegend": "La línea marca hoy",
+    "emptyTitle": "Aún no hay presupuestos",
+    "emptyBody": "Fija un límite mensual para las categorías que quieras vigilar. Cada barra mostrará a qué ritmo gastas.",
+    "notBudgeted": "Sin presupuesto",
+    "notBudgetedHint": "Este gasto no se compara con ningún límite.",
+    "spentAmount": "{amount} gastados"
+  },
+  "summary": {
+    "spent": "Gastado",
+    "budgeted": "Presupuestado",
+    "left": "Disponible",
+    "overBudget": "Excedido",
+    "month": "Mes",
+    "day": "Día {day}",
+    "dayDetail": "de {days} · {left, plural, one {queda # día} other {quedan # días}}",
+    "closed": "Cerrado",
+    "notStarted": "Sin empezar",
+    "daysInMonth": "{days} días",
+    "outsideBudgets": "{amount} fuera de presupuesto",
+    "noBudgets": "Sin presupuestos",
+    "ofBudgeted": "de {amount} presupuestados"
   }
 }
