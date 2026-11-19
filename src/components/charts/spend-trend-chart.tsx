@@ -15,8 +15,8 @@ export interface TrendPoint {
   /** Full label for the tooltip, e.g. "November 2026". */
   fullLabel: string;
   cents: number;
-  /** Where a click on this month's column goes. */
-  href: string;
+  /** Where a click on this month's column goes. Without one the chart is static. */
+  href?: string;
 }
 
 /**
@@ -79,8 +79,11 @@ export function SpendTrendChart({
           dataKey="cents"
           radius={[4, 4, 0, 0]}
           maxBarSize={24}
-          className="cursor-pointer"
-          onClick={(_, index) => router.push(rows[index].href, { scroll: false })}
+          className={rows.some((r) => r.href) ? "cursor-pointer" : undefined}
+          onClick={(_, index) => {
+            const href = rows[index]?.href;
+            if (href) router.push(href, { scroll: false });
+          }}
         >
           {rows.map((d) => (
             <Cell

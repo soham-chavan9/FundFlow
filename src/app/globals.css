@@ -239,3 +239,29 @@
     font-feature-settings: "tnum", "lnum";
   }
 }
+
+/*
+ * Landing page: the one authored motion. The sample budgets fill in from the
+ * left on load, one after another; the pace line is already in place, so the
+ * fills arrive at it. Off for reduced motion.
+ */
+@keyframes ff-fill-in {
+  from {
+    transform: scaleX(0);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .landing-bars [role="meter"] > div:first-child > div {
+    transform-origin: left center;
+    animation: ff-fill-in 1.1s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  .landing-bars li:nth-child(2) [role="meter"] > div:first-child > div {
+    animation-delay: 90ms;
+  }
+  .landing-bars li:nth-child(3) [role="meter"] > div:first-child > div {
+    animation-delay: 180ms;
+  }
+  .landing-bars li:nth-child(4) [role="meter"] > div:first-child > div {
+    animation-delay: 270ms;
+  }
+}
