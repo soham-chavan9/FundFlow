@@ -1,0 +1,83 @@
+{
+  "meta": {
+    "description": "Registra tus gastos, define presupuestos mensuales y descubre a dónde va tu dinero."
+  },
+  "common": {
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "add": "Añadir",
+    "close": "Cerrar",
+    "retry": "Reintentar",
+    "genericError": "Algo salió mal. Vuelve a intentarlo en un momento."
+  },
+  "languages": {
+    "en": "English",
+    "es": "Español",
+    "zh": "中文"
+  },
+  "nav": {
+    "label": "Principal",
+    "overview": "Resumen",
+    "expenses": "Gastos",
+    "income": "Ingresos",
+    "budgets": "Presupuestos",
+    "insights": "Análisis",
+    "shopping": "Lista de compras",
+    "assistant": "Asistente",
+    "settings": "Ajustes"
+  },
+  "shell": {
+    "toggleSidebar": "Mostrar u ocultar la barra lateral",
+    "previousMonth": "Mes anterior",
+    "nextMonth": "Mes siguiente",
+    "thisMonth": "Este mes",
+    "addExpense": "Añadir gasto",
+    "account": "Cuenta",
+    "theme": "Tema",
+    "themeLight": "Claro",
+    "themeDark": "Oscuro",
+    "themeSystem": "Sistema",
+    "language": "Idioma",
+    "signOut": "Cerrar sesión"
+  },
+  "auth": {
+    "loginTitle": "Inicia sesión en FundFlow",
+    "loginSubtitle": "Bienvenido de nuevo. Tu mes está donde lo dejaste.",
+    "registerTitle": "Crea tu cuenta de FundFlow",
+    "registerSubtitle": "Registra tus gastos, define presupuestos y descubre a dónde va tu dinero.",
+    "name": "Nombre",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "confirmPassword": "Confirmar contraseña",
+    "passwordHint": "Al menos 8 caracteres.",
+    "showPassword": "Mostrar contraseña",
+    "hidePassword": "Ocultar contraseña",
+    "submitLogin": "Iniciar sesión",
+    "submitRegister": "Crear cuenta",
+    "pendingLogin": "Iniciando sesión…",
+    "pendingRegister": "Creando cuenta…",
+    "noAccount": "¿Eres nuevo en FundFlow?",
+    "createAccount": "Crea una cuenta",
+    "haveAccount": "¿Ya tienes una cuenta?",
+    "signIn": "Inicia sesión",
+    "invalidCredentials": "El correo y la contraseña no coinciden. Revísalos e inténtalo de nuevo.",
+    "emailTaken": "Ya existe una cuenta con este correo. Inicia sesión."
+  },
+  "validation": {
+    "emailInvalid": "Introduce un correo válido, como nombre@ejemplo.com.",
+    "passwordRequired": "Introduce tu contraseña.",
+    "nameRequired": "Introduce tu nombre.",
+    "nameTooLong": "Usa 80 caracteres o menos.",
+    "passwordTooShort": "Usa al menos 8 caracteres.",
+    "passwordTooLong": "Usa 72 caracteres o menos.",
+    "passwordMismatch": "Las contraseñas no coinciden."
+  },
+  "dashboard": {
+    "title": "Resumen",
+    "emptyTitle": "Tu mes empieza aquí",
+    "emptyBody": "Añade un gasto o define un presupuesto y esta página mostrará a dónde va tu dinero y a qué ritmo gastas.",
+    "setBudget": "Definir un presupuesto"
+  }
+}

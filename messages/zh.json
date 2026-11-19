@@ -1,0 +1,83 @@
+{
+  "meta": {
+    "description": "记录支出、设定每月预算，看清钱都花在了哪里。"
+  },
+  "common": {
+    "save": "保存",
+    "cancel": "取消",
+    "delete": "删除",
+    "edit": "编辑",
+    "add": "添加",
+    "close": "关闭",
+    "retry": "重试",
+    "genericError": "出了点问题，请稍后再试。"
+  },
+  "languages": {
+    "en": "English",
+    "es": "Español",
+    "zh": "中文"
+  },
+  "nav": {
+    "label": "主导航",
+    "overview": "概览",
+    "expenses": "支出",
+    "income": "收入",
+    "budgets": "预算",
+    "insights": "分析",
+    "shopping": "购物清单",
+    "assistant": "助手",
+    "settings": "设置"
+  },
+  "shell": {
+    "toggleSidebar": "展开或收起侧边栏",
+    "previousMonth": "上个月",
+    "nextMonth": "下个月",
+    "thisMonth": "本月",
+    "addExpense": "添加支出",
+    "account": "账户",
+    "theme": "主题",
+    "themeLight": "浅色",
+    "themeDark": "深色",
+    "themeSystem": "跟随系统",
+    "language": "语言",
+    "signOut": "退出登录"
+  },
+  "auth": {
+    "loginTitle": "登录 FundFlow",
+    "loginSubtitle": "欢迎回来，你的账目还在原处。",
+    "registerTitle": "创建 FundFlow 账户",
+    "registerSubtitle": "记录支出、设定预算，看清钱都花在了哪里。",
+    "name": "姓名",
+    "email": "邮箱",
+    "password": "密码",
+    "confirmPassword": "确认密码",
+    "passwordHint": "至少 8 个字符。",
+    "showPassword": "显示密码",
+    "hidePassword": "隐藏密码",
+    "submitLogin": "登录",
+    "submitRegister": "创建账户",
+    "pendingLogin": "正在登录…",
+    "pendingRegister": "正在创建账户…",
+    "noAccount": "第一次使用 FundFlow？",
+    "createAccount": "创建账户",
+    "haveAccount": "已有账户？",
+    "signIn": "登录",
+    "invalidCredentials": "邮箱和密码不匹配，请检查后重试。",
+    "emailTaken": "该邮箱已注册，请直接登录。"
+  },
+  "validation": {
+    "emailInvalid": "请输入有效的邮箱地址，例如 name@example.com。",
+    "passwordRequired": "请输入密码。",
+    "nameRequired": "请输入姓名。",
+    "nameTooLong": "请不要超过 80 个字符。",
+    "passwordTooShort": "请至少输入 8 个字符。",
+    "passwordTooLong": "请不要超过 72 个字符。",
+    "passwordMismatch": "两次输入的密码不一致。"
+  },
+  "dashboard": {
+    "title": "概览",
+    "emptyTitle": "从这里开始记录本月",
+    "emptyBody": "添加一笔支出或设定预算后，这里会显示钱花在了哪里，以及你的花费节奏。",
+    "setBudget": "设定预算"
+  }
+}
