@@ -40,7 +40,8 @@
     "themeDark": "深色",
     "themeSystem": "跟随系统",
     "language": "语言",
-    "signOut": "退出登录"
+    "signOut": "退出登录",
+    "menu": "菜单"
   },
   "auth": {
     "loginTitle": "登录 FundFlow",
@@ -86,7 +87,17 @@
     "title": "概览",
     "emptyTitle": "从这里开始记录本月",
     "emptyBody": "添加一笔支出或设定预算后，这里会显示钱花在了哪里，以及你的花费节奏。",
-    "setBudget": "设定预算"
+    "setBudget": "设定预算",
+    "overTitle": "{count} 个类别超出预算",
+    "overItem": "{category} +{amount}",
+    "reviewBudgets": "查看预算",
+    "budgetsHeading": "预算",
+    "manage": "管理",
+    "noBudgets": "{month}还没有预算。为每个类别设置上限，即可查看花费节奏。",
+    "trendHeading": "近 6 个月支出",
+    "recentHeading": "最近支出",
+    "viewAll": "查看全部",
+    "noRecent": "{month}还没有支出。"
   },
   "categories": {
     "food": "餐饮",
@@ -158,6 +169,45 @@
   "budgets": {
     "overspendTitle": "{category}已超出预算 {amount}",
     "overspendBody": "{done}。{month}的预算为 {limit}。",
-    "view": "查看预算"
+    "view": "查看预算",
+    "title": "预算",
+    "set": "设置预算",
+    "setFor": "为{category}设置预算",
+    "editFor": "编辑{category}预算",
+    "limitFor": "{category}每月上限",
+    "remove": "移除",
+    "saved": "已保存{category}预算",
+    "removed": "已移除{category}预算",
+    "left": "剩余 {amount}",
+    "aheadLeft": "花得偏快 · 剩余 {amount}",
+    "overBy": "超出 {amount}",
+    "of": "/",
+    "meter": "{category}：已花 {spent}，预算 {limit}。{status}。",
+    "copyTitle": "沿用上月预算",
+    "copyBody": "复制你为{month}设置的 {count} 项预算。",
+    "copyAction": "复制预算",
+    "copied": "{count, plural, =0 {没有可复制的新预算} other {已复制 # 项预算}}",
+    "budgetedHeading": "{month}预算",
+    "paceLegend": "竖线表示今天",
+    "emptyTitle": "还没有预算",
+    "emptyBody": "为想关注的类别设置每月上限，每条进度条都会显示你的花费节奏。",
+    "notBudgeted": "未设预算",
+    "notBudgetedHint": "这些类别的支出不受上限约束。",
+    "spentAmount": "已花 {amount}"
+  },
+  "summary": {
+    "spent": "已支出",
+    "budgeted": "预算总额",
+    "left": "剩余",
+    "overBudget": "超出预算",
+    "month": "进度",
+    "day": "第 {day} 天",
+    "dayDetail": "共 {days} 天 · 还剩 {left} 天",
+    "closed": "已结束",
+    "notStarted": "未开始",
+    "daysInMonth": "共 {days} 天",
+    "outsideBudgets": "{amount} 不在预算内",
+    "noBudgets": "未设置预算",
+    "ofBudgeted": "预算 {amount}"
   }
 }
