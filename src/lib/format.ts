@@ -71,3 +71,21 @@ export function currencySymbol(currency: string, locale: string): string {
       .find((p) => p.type === "currency")?.value ?? currency
   );
 }
+
+/**
+ * Money for chart axes: whole units in full below 10,000 ("$2,000") and
+ * compact from there ("$12K"), so one axis keeps one style.
+ */
+export function formatAxisMoney(
+  cents: number,
+  currency: string,
+  locale: string,
+  axisMaxCents: number,
+): string {
+  return new Intl.NumberFormat(locale, {
+    style: "currency",
+    currency,
+    notation: axisMaxCents >= 1_000_000 ? "compact" : "standard",
+    maximumFractionDigits: 0,
+  }).format(cents / 100);
+}

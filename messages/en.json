@@ -87,7 +87,17 @@
     "title": "Overview",
     "emptyTitle": "Your month starts here",
     "emptyBody": "Add an expense or set a budget, and this page fills in with where your money is going and how you’re pacing.",
-    "setBudget": "Set a budget"
+    "setBudget": "Set a budget",
+    "overTitle": "{count, plural, one {One category is over budget} other {# categories are over budget}}",
+    "overItem": "{category} +{amount}",
+    "reviewBudgets": "Review budgets",
+    "budgetsHeading": "Budgets",
+    "manage": "Manage",
+    "noBudgets": "No budgets for {month} yet. Set a limit per category to see how your spending is pacing.",
+    "trendHeading": "Spending, last 6 months",
+    "recentHeading": "Recent expenses",
+    "viewAll": "View all",
+    "noRecent": "No expenses in {month} yet."
   },
   "categories": {
     "food": "Food",

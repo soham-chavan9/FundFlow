@@ -87,7 +87,17 @@
     "title": "概览",
     "emptyTitle": "从这里开始记录本月",
     "emptyBody": "添加一笔支出或设定预算后，这里会显示钱花在了哪里，以及你的花费节奏。",
-    "setBudget": "设定预算"
+    "setBudget": "设定预算",
+    "overTitle": "{count} 个类别超出预算",
+    "overItem": "{category} +{amount}",
+    "reviewBudgets": "查看预算",
+    "budgetsHeading": "预算",
+    "manage": "管理",
+    "noBudgets": "{month}还没有预算。为每个类别设置上限，即可查看花费节奏。",
+    "trendHeading": "近 6 个月支出",
+    "recentHeading": "最近支出",
+    "viewAll": "查看全部",
+    "noRecent": "{month}还没有支出。"
   },
   "categories": {
     "food": "餐饮",

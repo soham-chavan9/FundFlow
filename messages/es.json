@@ -87,7 +87,17 @@
     "title": "Resumen",
     "emptyTitle": "Tu mes empieza aquí",
     "emptyBody": "Añade un gasto o define un presupuesto y esta página mostrará a dónde va tu dinero y a qué ritmo gastas.",
-    "setBudget": "Definir un presupuesto"
+    "setBudget": "Definir un presupuesto",
+    "overTitle": "{count, plural, one {Una categoría supera su presupuesto} other {# categorías superan su presupuesto}}",
+    "overItem": "{category} +{amount}",
+    "reviewBudgets": "Revisar presupuestos",
+    "budgetsHeading": "Presupuestos",
+    "manage": "Gestionar",
+    "noBudgets": "Aún no hay presupuestos para {month}. Fija un límite por categoría para ver a qué ritmo gastas.",
+    "trendHeading": "Gasto de los últimos 6 meses",
+    "recentHeading": "Gastos recientes",
+    "viewAll": "Ver todos",
+    "noRecent": "Aún no hay gastos en {month}."
   },
   "categories": {
     "food": "Comida",

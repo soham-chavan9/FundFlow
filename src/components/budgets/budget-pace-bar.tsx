@@ -32,7 +32,7 @@ export function BudgetPaceBar({
         <div
           className={cn(
             "h-full rounded-full transition-[width] duration-500 ease-out motion-reduce:transition-none",
-            pace.state === "onTrack" && "bg-foreground/75",
+            pace.state === "onTrack" && "bg-foreground/55",
             pace.state === "ahead" && "bg-warning",
             pace.state === "over" && "bg-destructive",
           )}
