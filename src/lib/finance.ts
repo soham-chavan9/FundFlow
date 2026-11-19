@@ -69,8 +69,14 @@ export function budgetPace(
   spentCents: number,
   limitCents: number,
   progress: { days: number; elapsed: number },
+  options: { fixed?: boolean } = {},
 ): BudgetPace {
-  const paceRatio = progress.days > 0 ? Math.min(1, progress.elapsed / progress.days) : 0;
+  // A fixed bill has no pace: judge it against the whole limit (no pace line).
+  const paceRatio = options.fixed
+    ? 1
+    : progress.days > 0
+      ? Math.min(1, progress.elapsed / progress.days)
+      : 0;
   const ratio = limitCents > 0 ? spentCents / limitCents : spentCents > 0 ? Infinity : 0;
   let state: PaceState = "onTrack";
   if (spentCents > limitCents) state = "over";
