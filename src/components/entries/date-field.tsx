@@ -55,7 +55,7 @@ export function DateField({
           aria-invalid={invalid || undefined}
           aria-describedby={describedBy}
           className={cn(
-            "dark:bg-input/30 h-8 w-full justify-start px-2.5 font-normal tabular-nums",
+            "dark:bg-input/30 h-8 w-full justify-start bg-transparent px-2.5 font-normal tabular-nums",
           )}
         >
           <CalendarDays className="text-muted-foreground" />
