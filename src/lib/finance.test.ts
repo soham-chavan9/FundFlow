@@ -173,4 +173,18 @@ describe("buildYearlyReport", () => {
   it("has no average before the year starts", () => {
     expect(buildYearlyReport(2030, [], [], "2026-11").averageSpentCents).toBeNull();
   });
+
+  it("averages from the first active month, not from January", () => {
+    const report = buildYearlyReport(
+      2026,
+      [
+        { month: "2026-06", cents: 30_000 },
+        { month: "2026-07", cents: 10_000 },
+      ],
+      [],
+      "2026-08",
+    );
+    // June, July and August count (August with nothing spent yet).
+    expect(report.averageSpentCents).toBe(13_333);
+  });
 });
