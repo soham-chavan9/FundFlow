@@ -34,7 +34,12 @@ function NavLinks({ items }: { items: NavItem[] }) {
         const href = item.monthScoped && month ? `${item.href}?month=${month}` : item.href;
         return (
           <SidebarMenuItem key={item.key}>
-            <SidebarMenuButton asChild isActive={active} tooltip={t(item.key)}>
+            <SidebarMenuButton
+              asChild
+              isActive={active}
+              tooltip={t(item.key)}
+              className="data-[active=true]:text-primary"
+            >
               <Link
                 href={href}
                 aria-current={active ? "page" : undefined}

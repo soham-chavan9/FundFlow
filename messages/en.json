@@ -195,7 +195,8 @@
     "emptyBody": "Set a monthly limit for the categories you want to watch. Each bar then shows how your spending is pacing.",
     "notBudgeted": "Not budgeted",
     "notBudgetedHint": "Spending here isn’t measured against a limit.",
-    "spentAmount": "{amount} spent"
+    "spentAmount": "{amount} spent",
+    "fixedLeft": "Fixed bill, flagged only if over · {amount} left"
   },
   "summary": {
     "spent": "Spent",

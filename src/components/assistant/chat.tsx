@@ -104,7 +104,7 @@ export function AssistantChat({ suggestions }: { suggestions: string[] }) {
         <div className="mx-auto flex w-full max-w-3xl flex-col gap-6 p-4 sm:p-6">
           {messages.length === 0 ? (
             <div className="flex flex-col items-start gap-4 pt-6 sm:pt-12">
-              <span className="bg-primary/10 text-primary grid size-9 place-items-center rounded-lg">
+              <span className="bg-muted text-foreground grid size-9 place-items-center rounded-lg">
                 <Sparkles className="size-4" aria-hidden />
               </span>
               <div>

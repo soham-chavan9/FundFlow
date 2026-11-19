@@ -38,6 +38,7 @@
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
   --color-chart-spend: var(--chart-spend);
+  --color-chart-ink: var(--chart-ink);
   --color-chart-income: var(--chart-income);
   --color-chart-context: var(--chart-context);
 
@@ -104,11 +105,15 @@
   --chart-5: oklch(0.74 0.15 72);
 
   /*
-   * Chart series. Spend is the accent; income is the validated aqua; context
-   * marks (other months) are a gray that still clears 3:1 on the card.
+   * Chart series. Income (aqua) and spend (orange) are a validated pair:
+   * warm outflow, cool inflow, passing the colour-blind and contrast checks in
+   * both themes. The accent stays for actions, selection and the pace line (a
+   * selected month uses --primary directly). Single-series magnitude bars use
+   * ink, and context marks (other months) are a gray that clears 3:1.
    * Validated with the dataviz palette checks against the card surface.
    */
-  --chart-spend: oklch(0.51 0.19 271);
+  --chart-spend: #eb6834;
+  --chart-ink: oklch(0.36 0.03 262);
   --chart-income: #1baf7a;
   --chart-context: oklch(0.64 0.015 258);
 
@@ -170,7 +175,8 @@
   --chart-5: oklch(0.8 0.14 76);
 
   /* Dark steps chosen for the dark band (L 0.48-0.67) and 3:1 on the card. */
-  --chart-spend: oklch(0.65 0.16 273);
+  --chart-spend: #d95926;
+  --chart-ink: oklch(0.82 0.015 258);
   --chart-income: #199e70;
   --chart-context: oklch(0.5 0.016 262);
 

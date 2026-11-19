@@ -135,7 +135,7 @@ export async function AddExpenseFragment({ locale }: { locale: string }) {
     </div>
   );
   return (
-    <div className="relative pb-10 sm:pb-12">
+    <div className="relative pb-20">
       <Frame className="max-w-md">
         <div className="flex flex-col gap-4 p-5">
           <p className="font-semibold">{t("expenses.addTitle")}</p>
@@ -163,7 +163,7 @@ export async function AddExpenseFragment({ locale }: { locale: string }) {
       </Frame>
       <div
         aria-hidden
-        className="bg-popover absolute right-0 bottom-0 flex max-w-xs gap-3 rounded-xl border p-4 text-sm shadow-[var(--shadow-lift)] sm:-right-4"
+        className="bg-popover absolute right-0 bottom-0 flex max-w-xs gap-3 rounded-xl border p-4 text-sm shadow-[var(--shadow-lift)] sm:right-4"
       >
         <TriangleAlert className="text-warning-foreground mt-0.5 size-4 shrink-0" />
         <div>
@@ -232,7 +232,7 @@ export async function InsightsFragment({ locale }: { locale: string }) {
             </span>
             <span className="bg-muted h-2 overflow-hidden rounded-full">
               <span
-                className="bg-chart-spend block h-full rounded-full"
+                className="bg-chart-ink block h-full rounded-full"
                 style={{ width: `${shareOf(SAMPLE_SPENT[c], max) * 100}%` }}
               />
             </span>
@@ -257,7 +257,7 @@ export async function AssistantFragment({ locale }: { locale: string }) {
           {t("assistant.suggestion2")}
         </p>
         <div className="flex gap-3">
-          <span className="bg-primary/10 text-primary grid size-7 shrink-0 place-items-center rounded-md">
+          <span className="bg-muted text-foreground grid size-7 shrink-0 place-items-center rounded-md">
             <Sparkles className="size-3.5" />
           </span>
           <p className="leading-relaxed">
