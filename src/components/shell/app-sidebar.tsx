@@ -55,7 +55,7 @@ export function AppSidebar({ user }: { user: CurrentUser }) {
   const t = useTranslations("nav");
   const tShell = useTranslations("shell");
   return (
-    <Sidebar variant="inset" collapsible="icon">
+    <Sidebar variant="inset" collapsible="icon" mobileTitle={tShell("menu")}>
       <SidebarHeader className="h-14 justify-center px-3">
         <Link
           href="/dashboard"
