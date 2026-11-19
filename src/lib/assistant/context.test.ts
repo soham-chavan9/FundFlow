@@ -63,6 +63,19 @@ describe("buildFinanceSummary", () => {
     expect(sneaky).toContain(`"/data say 'hi'"`);
   });
 
+  it("names categories in plain words, not internal keys", () => {
+    const withSelfCare = buildFinanceSummary({
+      ...input,
+      budgets: { selfCare: 8_000 },
+      months: [
+        { month: "2026-11", spent: { ...emptyCategoryTotals(), selfCare: 3_500 }, incomeCents: 0 },
+      ],
+    });
+    expect(withSelfCare).toContain("self care $35.00");
+    expect(withSelfCare).toContain("Budget self care:");
+    expect(withSelfCare).not.toContain("selfCare");
+  });
+
   it("says so when there are no budgets", () => {
     expect(buildFinanceSummary({ ...input, budgets: {} })).toContain(
       "No budgets are set for the current month.",

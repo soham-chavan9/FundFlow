@@ -29,6 +29,18 @@ export interface FinanceContextInput {
   now: Date;
 }
 
+/** Plain English names for the model; internal keys like "selfCare" leaked into replies. */
+const CATEGORY_NAMES: Record<Category, string> = {
+  food: "food",
+  housing: "housing",
+  transport: "transport",
+  entertainment: "entertainment",
+  medical: "medical",
+  selfCare: "self care",
+  travel: "travel",
+  other: "other",
+};
+
 const LANGUAGE_NAMES: Record<string, string> = {
   en: "English",
   es: "Spanish",
@@ -56,7 +68,7 @@ export function buildFinanceSummary(input: FinanceContextInput): string {
     const total = sumCents(Object.values(m.spent));
     const byCategory = CATEGORIES.filter((c) => m.spent[c] > 0)
       .sort((a, b) => m.spent[b] - m.spent[a])
-      .map((c) => `${c} ${money(m.spent[c])}`)
+      .map((c) => `${CATEGORY_NAMES[c]} ${money(m.spent[c])}`)
       .join(", ");
     lines.push(
       `Month ${m.month}: income ${money(m.incomeCents)}, spent ${money(total)}` +
@@ -83,14 +95,16 @@ export function buildFinanceSummary(input: FinanceContextInput): string {
               ? `ahead of pace, ${money(pace.remainingCents)} left`
               : `on track, ${money(pace.remainingCents)} left`;
         lines.push(
-          `Budget ${c}: ${money(pace.spentCents)} of ${money(pace.limitCents)} spent, ${status}`,
+          `Budget ${CATEGORY_NAMES[c]}: ${money(pace.spentCents)} of ${money(pace.limitCents)} spent, ${status}`,
         );
       }
     }
     if (input.topExpenses.length > 0) {
       lines.push("Largest expenses this month:");
       for (const e of input.topExpenses) {
-        lines.push(`- ${e.date} ${e.category} ${money(e.amountCents)} "${clean(e.title)}"`);
+        lines.push(
+          `- ${e.date} ${CATEGORY_NAMES[e.category]} ${money(e.amountCents)} "${clean(e.title)}"`,
+        );
       }
     }
   }
