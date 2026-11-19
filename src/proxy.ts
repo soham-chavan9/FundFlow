@@ -37,6 +37,13 @@ export async function proxy(request: NextRequest) {
     return res;
   }
   if (isAuthPage && session) {
+    // The page found the signed token stale (password changed, account gone):
+    // stay on the sign-in page and drop the cookie instead of looping.
+    if (request.nextUrl.searchParams.has("expired")) {
+      const res = NextResponse.next();
+      res.cookies.delete(SESSION_COOKIE);
+      return res;
+    }
     return NextResponse.redirect(new URL("/dashboard", request.url));
   }
   return NextResponse.next();

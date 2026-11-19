@@ -32,7 +32,7 @@ export async function loginAction(
   const ok = await verifyPassword(parsed.data.password, user?.passwordHash ?? null);
   if (!user || !ok) return { formError: "auth.invalidCredentials", values };
 
-  await createSession(user._id.toHexString());
+  await createSession(user._id.toHexString(), user.sessionVersion ?? 0);
   // Restore the language this account last chose.
   if (isLocale(user.locale)) {
     (await cookies()).set(LOCALE_COOKIE, user.locale, {
