@@ -45,3 +45,9 @@ next-env.d.ts
 /.claude/
 /playwright-report/
 /test-results/
+
+# Impeccable design-review working files (screenshots, decision payloads, local state)
+/.impeccable/review/
+/.impeccable/questions/
+/.impeccable/payload-*.json
+/.impeccable/hook.cache.json
