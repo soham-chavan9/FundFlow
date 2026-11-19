@@ -1,0 +1,733 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-19T06:26:30.355699+00:00",
+  "title": "Design System: FundFlow",
+  "extensions": {
+    "colorMeta": {
+      "primary": {
+        "role": "primary",
+        "displayName": "Ledger Indigo",
+        "canonical": "oklch(0.51 0.19 271)",
+        "dark": "oklch(0.69 0.155 273)",
+        "tonalRamp": [
+          "oklch(0.15 0.079 271)",
+          "oklch(0.25 0.107 271)",
+          "oklch(0.35 0.135 271)",
+          "oklch(0.45 0.162 271)",
+          "oklch(0.58 0.182 271)",
+          "oklch(0.70 0.149 271)",
+          "oklch(0.83 0.113 271)",
+          "oklch(0.95 0.079 271)"
+        ]
+      },
+      "primary-foreground": {
+        "role": "primary",
+        "displayName": "On Indigo",
+        "canonical": "oklch(0.99 0.004 271)",
+        "dark": "oklch(0.17 0.02 270)",
+        "tonalRamp": [
+          "oklch(0.15 0.002 271)",
+          "oklch(0.25 0.002 271)",
+          "oklch(0.35 0.003 271)",
+          "oklch(0.45 0.003 271)",
+          "oklch(0.58 0.004 271)",
+          "oklch(0.70 0.003 271)",
+          "oklch(0.83 0.002 271)",
+          "oklch(0.95 0.002 271)"
+        ]
+      },
+      "pace": {
+        "role": "primary",
+        "displayName": "Pace Indigo",
+        "canonical": "oklch(0.51 0.19 271)",
+        "dark": "oklch(0.78 0.12 273)",
+        "tonalRamp": [
+          "oklch(0.15 0.079 271)",
+          "oklch(0.25 0.107 271)",
+          "oklch(0.35 0.135 271)",
+          "oklch(0.45 0.162 271)",
+          "oklch(0.58 0.182 271)",
+          "oklch(0.70 0.149 271)",
+          "oklch(0.83 0.113 271)",
+          "oklch(0.95 0.079 271)"
+        ]
+      },
+      "ring": {
+        "role": "primary",
+        "displayName": "Focus Indigo",
+        "canonical": "oklch(0.51 0.19 271)",
+        "dark": "oklch(0.69 0.155 273)",
+        "tonalRamp": [
+          "oklch(0.15 0.079 271)",
+          "oklch(0.25 0.107 271)",
+          "oklch(0.35 0.135 271)",
+          "oklch(0.45 0.162 271)",
+          "oklch(0.58 0.182 271)",
+          "oklch(0.70 0.149 271)",
+          "oklch(0.83 0.113 271)",
+          "oklch(0.95 0.079 271)"
+        ]
+      },
+      "background": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "oklch(0.992 0.002 255)",
+        "dark": "oklch(0.168 0.012 262)",
+        "tonalRamp": [
+          "oklch(0.15 0.004 255)",
+          "oklch(0.25 0.006 255)",
+          "oklch(0.35 0.007 255)",
+          "oklch(0.45 0.009 255)",
+          "oklch(0.58 0.010 255)",
+          "oklch(0.70 0.008 255)",
+          "oklch(0.83 0.006 255)",
+          "oklch(0.95 0.004 255)"
+        ]
+      },
+      "card": {
+        "role": "neutral",
+        "displayName": "Statement White",
+        "canonical": "oklch(1 0 0)",
+        "dark": "oklch(0.198 0.014 262)",
+        "tonalRamp": [
+          "oklch(0.15 0.004 262)",
+          "oklch(0.25 0.006 262)",
+          "oklch(0.35 0.007 262)",
+          "oklch(0.45 0.009 262)",
+          "oklch(0.58 0.010 262)",
+          "oklch(0.70 0.008 262)",
+          "oklch(0.83 0.006 262)",
+          "oklch(0.95 0.004 262)"
+        ]
+      },
+      "sidebar": {
+        "role": "neutral",
+        "displayName": "Rail Grey",
+        "canonical": "oklch(0.968 0.006 258)",
+        "dark": "oklch(0.145 0.012 262)",
+        "tonalRamp": [
+          "oklch(0.15 0.005 258)",
+          "oklch(0.25 0.007 258)",
+          "oklch(0.35 0.009 258)",
+          "oklch(0.45 0.010 258)",
+          "oklch(0.58 0.011 258)",
+          "oklch(0.70 0.009 258)",
+          "oklch(0.83 0.007 258)",
+          "oklch(0.95 0.005 258)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Wash",
+        "canonical": "oklch(0.962 0.006 258)",
+        "dark": "oklch(0.24 0.015 262)",
+        "tonalRamp": [
+          "oklch(0.15 0.005 258)",
+          "oklch(0.25 0.007 258)",
+          "oklch(0.35 0.009 258)",
+          "oklch(0.45 0.010 258)",
+          "oklch(0.58 0.011 258)",
+          "oklch(0.70 0.009 258)",
+          "oklch(0.83 0.007 258)",
+          "oklch(0.95 0.005 258)"
+        ]
+      },
+      "accent": {
+        "role": "neutral",
+        "displayName": "Selected Wash",
+        "canonical": "oklch(0.952 0.01 264)",
+        "dark": "oklch(0.255 0.02 266)",
+        "tonalRamp": [
+          "oklch(0.15 0.008 264)",
+          "oklch(0.25 0.011 264)",
+          "oklch(0.35 0.014 264)",
+          "oklch(0.45 0.017 264)",
+          "oklch(0.58 0.019 264)",
+          "oklch(0.70 0.016 264)",
+          "oklch(0.83 0.012 264)",
+          "oklch(0.95 0.008 264)"
+        ]
+      },
+      "sidebar-accent": {
+        "role": "neutral",
+        "displayName": "Selected Wash (rail)",
+        "canonical": "oklch(0.925 0.014 266)",
+        "dark": "oklch(0.225 0.018 266)",
+        "tonalRamp": [
+          "oklch(0.15 0.008 266)",
+          "oklch(0.25 0.011 266)",
+          "oklch(0.35 0.014 266)",
+          "oklch(0.45 0.017 266)",
+          "oklch(0.58 0.019 266)",
+          "oklch(0.70 0.016 266)",
+          "oklch(0.83 0.012 266)",
+          "oklch(0.95 0.008 266)"
+        ]
+      },
+      "foreground": {
+        "role": "neutral",
+        "displayName": "Navy Ink",
+        "canonical": "oklch(0.22 0.025 262)",
+        "dark": "oklch(0.955 0.005 255)",
+        "tonalRamp": [
+          "oklch(0.15 0.010 262)",
+          "oklch(0.25 0.014 262)",
+          "oklch(0.35 0.018 262)",
+          "oklch(0.45 0.021 262)",
+          "oklch(0.58 0.024 262)",
+          "oklch(0.70 0.020 262)",
+          "oklch(0.83 0.015 262)",
+          "oklch(0.95 0.010 262)"
+        ]
+      },
+      "sidebar-foreground": {
+        "role": "neutral",
+        "displayName": "Rail Ink",
+        "canonical": "oklch(0.32 0.025 262)",
+        "dark": "oklch(0.84 0.01 258)",
+        "tonalRamp": [
+          "oklch(0.15 0.010 262)",
+          "oklch(0.25 0.014 262)",
+          "oklch(0.35 0.018 262)",
+          "oklch(0.45 0.021 262)",
+          "oklch(0.58 0.024 262)",
+          "oklch(0.70 0.020 262)",
+          "oklch(0.83 0.015 262)",
+          "oklch(0.95 0.010 262)"
+        ]
+      },
+      "muted-foreground": {
+        "role": "neutral",
+        "displayName": "Slate",
+        "canonical": "oklch(0.49 0.02 260)",
+        "dark": "oklch(0.72 0.015 258)",
+        "tonalRamp": [
+          "oklch(0.15 0.008 260)",
+          "oklch(0.25 0.011 260)",
+          "oklch(0.35 0.014 260)",
+          "oklch(0.45 0.017 260)",
+          "oklch(0.58 0.019 260)",
+          "oklch(0.70 0.016 260)",
+          "oklch(0.83 0.012 260)",
+          "oklch(0.95 0.008 260)"
+        ]
+      },
+      "border": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "oklch(0.912 0.008 258)",
+        "dark": "oklch(1 0 0 / 9%)",
+        "tonalRamp": [
+          "oklch(0.15 0.004 258)",
+          "oklch(0.25 0.006 258)",
+          "oklch(0.35 0.007 258)",
+          "oklch(0.45 0.009 258)",
+          "oklch(0.58 0.010 258)",
+          "oklch(0.70 0.008 258)",
+          "oklch(0.83 0.006 258)",
+          "oklch(0.95 0.004 258)"
+        ]
+      },
+      "input": {
+        "role": "neutral",
+        "displayName": "Field Hairline",
+        "canonical": "oklch(0.88 0.01 258)",
+        "dark": "oklch(1 0 0 / 15%)",
+        "tonalRamp": [
+          "oklch(0.15 0.004 258)",
+          "oklch(0.25 0.006 258)",
+          "oklch(0.35 0.007 258)",
+          "oklch(0.45 0.009 258)",
+          "oklch(0.58 0.010 258)",
+          "oklch(0.70 0.008 258)",
+          "oklch(0.83 0.006 258)",
+          "oklch(0.95 0.004 258)"
+        ]
+      },
+      "success": {
+        "role": "secondary",
+        "displayName": "State: On Track",
+        "canonical": "oklch(0.53 0.12 156)",
+        "dark": "oklch(0.74 0.14 156)",
+        "tonalRamp": [
+          "oklch(0.15 0.050 156)",
+          "oklch(0.25 0.068 156)",
+          "oklch(0.35 0.085 156)",
+          "oklch(0.45 0.103 156)",
+          "oklch(0.58 0.115 156)",
+          "oklch(0.70 0.094 156)",
+          "oklch(0.83 0.071 156)",
+          "oklch(0.95 0.050 156)"
+        ]
+      },
+      "warning": {
+        "role": "secondary",
+        "displayName": "State: Ahead of Pace",
+        "canonical": "oklch(0.74 0.15 72)",
+        "dark": "oklch(0.8 0.14 76)",
+        "tonalRamp": [
+          "oklch(0.15 0.063 72)",
+          "oklch(0.25 0.085 72)",
+          "oklch(0.35 0.106 72)",
+          "oklch(0.45 0.128 72)",
+          "oklch(0.58 0.143 72)",
+          "oklch(0.70 0.117 72)",
+          "oklch(0.83 0.089 72)",
+          "oklch(0.95 0.063 72)"
+        ]
+      },
+      "warning-foreground": {
+        "role": "secondary",
+        "displayName": "Ahead of Pace (text)",
+        "canonical": "oklch(0.48 0.11 62)",
+        "dark": "oklch(0.83 0.13 76)",
+        "tonalRamp": [
+          "oklch(0.15 0.046 62)",
+          "oklch(0.25 0.062 62)",
+          "oklch(0.35 0.078 62)",
+          "oklch(0.45 0.094 62)",
+          "oklch(0.58 0.105 62)",
+          "oklch(0.70 0.086 62)",
+          "oklch(0.83 0.065 62)",
+          "oklch(0.95 0.046 62)"
+        ]
+      },
+      "destructive": {
+        "role": "secondary",
+        "displayName": "State: Over",
+        "canonical": "oklch(0.55 0.2 26)",
+        "dark": "oklch(0.69 0.18 24)",
+        "tonalRamp": [
+          "oklch(0.15 0.084 26)",
+          "oklch(0.25 0.113 26)",
+          "oklch(0.35 0.142 26)",
+          "oklch(0.45 0.171 26)",
+          "oklch(0.58 0.191 26)",
+          "oklch(0.70 0.156 26)",
+          "oklch(0.83 0.119 26)",
+          "oklch(0.95 0.084 26)"
+        ]
+      },
+      "chart-spend": {
+        "role": "tertiary",
+        "displayName": "Chart Ink: Spent",
+        "canonical": "oklch(0.38 0.04 262)",
+        "dark": "oklch(0.84 0.02 258)",
+        "tonalRamp": [
+          "oklch(0.15 0.017 262)",
+          "oklch(0.25 0.023 262)",
+          "oklch(0.35 0.028 262)",
+          "oklch(0.45 0.034 262)",
+          "oklch(0.58 0.038 262)",
+          "oklch(0.70 0.031 262)",
+          "oklch(0.83 0.024 262)",
+          "oklch(0.95 0.017 262)"
+        ]
+      },
+      "chart-income": {
+        "role": "tertiary",
+        "displayName": "Chart Ink: Income",
+        "canonical": "oklch(0.74 0.035 262)",
+        "dark": "oklch(0.5 0.03 262)",
+        "tonalRamp": [
+          "oklch(0.15 0.015 262)",
+          "oklch(0.25 0.020 262)",
+          "oklch(0.35 0.025 262)",
+          "oklch(0.45 0.030 262)",
+          "oklch(0.58 0.033 262)",
+          "oklch(0.70 0.027 262)",
+          "oklch(0.83 0.021 262)",
+          "oklch(0.95 0.015 262)"
+        ]
+      },
+      "chart-ink": {
+        "role": "tertiary",
+        "displayName": "Chart Ink",
+        "canonical": "oklch(0.36 0.03 262)",
+        "dark": "oklch(0.82 0.015 258)",
+        "tonalRamp": [
+          "oklch(0.15 0.013 262)",
+          "oklch(0.25 0.017 262)",
+          "oklch(0.35 0.021 262)",
+          "oklch(0.45 0.026 262)",
+          "oklch(0.58 0.029 262)",
+          "oklch(0.70 0.023 262)",
+          "oklch(0.83 0.018 262)",
+          "oklch(0.95 0.013 262)"
+        ]
+      },
+      "chart-context": {
+        "role": "tertiary",
+        "displayName": "Chart Context",
+        "canonical": "oklch(0.64 0.015 258)",
+        "dark": "oklch(0.5 0.016 262)",
+        "tonalRamp": [
+          "oklch(0.15 0.006 258)",
+          "oklch(0.25 0.008 258)",
+          "oklch(0.35 0.011 258)",
+          "oklch(0.45 0.013 258)",
+          "oklch(0.58 0.014 258)",
+          "oklch(0.70 0.012 258)",
+          "oklch(0.83 0.009 258)",
+          "oklch(0.95 0.006 258)"
+        ]
+      },
+      "cat-housing": {
+        "role": "tertiary",
+        "displayName": "Category: Housing",
+        "canonical": "#2a78d6",
+        "dark": "#3987e5",
+        "tonalRamp": [
+          "oklch(0.15 0.067 255)",
+          "oklch(0.25 0.090 255)",
+          "oklch(0.35 0.113 255)",
+          "oklch(0.45 0.137 255)",
+          "oklch(0.58 0.153 255)",
+          "oklch(0.70 0.125 255)",
+          "oklch(0.83 0.095 255)",
+          "oklch(0.95 0.067 255)"
+        ]
+      },
+      "cat-food": {
+        "role": "tertiary",
+        "displayName": "Category: Food",
+        "canonical": "#eb6834",
+        "dark": "#d95926",
+        "tonalRamp": [
+          "oklch(0.15 0.067 45)",
+          "oklch(0.25 0.090 45)",
+          "oklch(0.35 0.113 45)",
+          "oklch(0.45 0.137 45)",
+          "oklch(0.58 0.153 45)",
+          "oklch(0.70 0.125 45)",
+          "oklch(0.83 0.095 45)",
+          "oklch(0.95 0.067 45)"
+        ]
+      },
+      "cat-other": {
+        "role": "tertiary",
+        "displayName": "Category: Other",
+        "canonical": "#1baf7a",
+        "dark": "#199e70",
+        "tonalRamp": [
+          "oklch(0.15 0.067 165)",
+          "oklch(0.25 0.090 165)",
+          "oklch(0.35 0.113 165)",
+          "oklch(0.45 0.137 165)",
+          "oklch(0.58 0.153 165)",
+          "oklch(0.70 0.125 165)",
+          "oklch(0.83 0.095 165)",
+          "oklch(0.95 0.067 165)"
+        ]
+      },
+      "cat-travel": {
+        "role": "tertiary",
+        "displayName": "Category: Travel",
+        "canonical": "#eda100",
+        "dark": "#c98500",
+        "tonalRamp": [
+          "oklch(0.15 0.067 80)",
+          "oklch(0.25 0.090 80)",
+          "oklch(0.35 0.113 80)",
+          "oklch(0.45 0.137 80)",
+          "oklch(0.58 0.153 80)",
+          "oklch(0.70 0.125 80)",
+          "oklch(0.83 0.095 80)",
+          "oklch(0.95 0.067 80)"
+        ]
+      },
+      "cat-selfcare": {
+        "role": "tertiary",
+        "displayName": "Category: Self care",
+        "canonical": "#e87ba4",
+        "dark": "#d55181",
+        "tonalRamp": [
+          "oklch(0.15 0.067 0)",
+          "oklch(0.25 0.090 0)",
+          "oklch(0.35 0.113 0)",
+          "oklch(0.45 0.137 0)",
+          "oklch(0.58 0.153 0)",
+          "oklch(0.70 0.125 0)",
+          "oklch(0.83 0.095 0)",
+          "oklch(0.95 0.067 0)"
+        ]
+      },
+      "cat-transport": {
+        "role": "tertiary",
+        "displayName": "Category: Transport",
+        "canonical": "#008300",
+        "dark": "#0ca30c",
+        "tonalRamp": [
+          "oklch(0.15 0.067 142)",
+          "oklch(0.25 0.090 142)",
+          "oklch(0.35 0.113 142)",
+          "oklch(0.45 0.137 142)",
+          "oklch(0.58 0.153 142)",
+          "oklch(0.70 0.125 142)",
+          "oklch(0.83 0.095 142)",
+          "oklch(0.95 0.067 142)"
+        ]
+      },
+      "cat-entertainment": {
+        "role": "tertiary",
+        "displayName": "Category: Entertainment",
+        "canonical": "#6250d6",
+        "dark": "#9085e9",
+        "tonalRamp": [
+          "oklch(0.15 0.067 285)",
+          "oklch(0.25 0.090 285)",
+          "oklch(0.35 0.113 285)",
+          "oklch(0.45 0.137 285)",
+          "oklch(0.58 0.153 285)",
+          "oklch(0.70 0.125 285)",
+          "oklch(0.83 0.095 285)",
+          "oklch(0.95 0.067 285)"
+        ]
+      },
+      "cat-medical": {
+        "role": "tertiary",
+        "displayName": "Category: Medical",
+        "canonical": "#e34948",
+        "dark": "#e66767",
+        "tonalRamp": [
+          "oklch(0.15 0.067 25)",
+          "oklch(0.25 0.090 25)",
+          "oklch(0.35 0.113 25)",
+          "oklch(0.45 0.137 25)",
+          "oklch(0.58 0.153 25)",
+          "oklch(0.70 0.125 25)",
+          "oklch(0.83 0.095 25)",
+          "oklch(0.95 0.067 25)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Landing hero headline only."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Landing section heads and the closing call to action."
+      },
+      "stat": {
+        "displayName": "Stat",
+        "purpose": "Large standalone values in the summary strip; proportional figures."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Card titles."
+      },
+      "page-title": {
+        "displayName": "Page Title",
+        "purpose": "The h1 in the sticky app top bar, matched to the wordmark."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "App running text and table cells."
+      },
+      "body-lead": {
+        "displayName": "Body Lead",
+        "purpose": "Landing hero lede; landing prose uses 16px with relaxed leading."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Stat details, status lines under budget bars, timestamps, badges."
+      },
+      "amount": {
+        "displayName": "Amount",
+        "purpose": "Amounts in columns, rows and status lines; tabular lining figures."
+      }
+    },
+    "shadows": [
+      {
+        "name": "soft",
+        "value": "0 1px 2px 0 oklch(0.22 0.025 262 / 0.05), 0 1px 3px 0 oklch(0.22 0.025 262 / 0.04)",
+        "purpose": "Seats the inset content plane; the selected segment of a segmented control."
+      },
+      {
+        "name": "lift",
+        "value": "0 4px 12px -2px oklch(0.22 0.025 262 / 0.08), 0 2px 4px -2px oklch(0.22 0.025 262 / 0.05)",
+        "purpose": "Floating things: chart tooltips, the auth card, landing product frames and callout."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ff-fill-in",
+        "value": "scaleX(0) to rest, 1.1s cubic-bezier(0.16, 1, 0.3, 1), 90ms stagger",
+        "purpose": "Landing only: sample budget fills arrive at an already-placed pace line. Off for reduced motion."
+      },
+      {
+        "name": "pace-fill",
+        "value": "width 500ms ease-out",
+        "purpose": "Budget bar fill when the value changes; none under reduced motion."
+      },
+      {
+        "name": "control-press",
+        "value": "translateY(1px) on :active",
+        "purpose": "Button press feedback."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "min-width",
+        "value": "375px"
+      }
+    ],
+    "radiusBase": "--radius: 0.5rem; sm 0.6x, md 0.8x, lg 1x, xl 1.4x",
+    "themes": "Light on :root, dark on .dark; every color token has a dark value in colorMeta.dark"
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The single filled action per view.",
+      "html": "<button class=\"ds-btn ds-btn-primary\">Add expense</button>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;gap:6px;height:32px;padding:0 10px;border-radius:8px;border:1px solid transparent;font:500 14px/1 Geist,ui-sans-serif,system-ui,sans-serif;cursor:pointer;transition:background-color .15s,box-shadow .15s,transform .05s;outline:none}.ds-btn-primary{background:var(--primary);color:var(--primary-foreground)}.ds-btn-primary:hover{background:color-mix(in oklch,var(--primary) 80%,transparent)}.ds-btn-primary:focus-visible{border-color:var(--ring);box-shadow: 0 0 0 3px color-mix(in oklch, var(--ring) 50%, transparent);}.ds-btn-primary:active{transform:translateY(1px)}"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Secondary action beside a primary, e.g. Sign in.",
+      "html": "<button class=\"ds-btn-o\">Sign in</button>",
+      "css": ".ds-btn-o{display:inline-flex;align-items:center;height:32px;padding:0 10px;border-radius:8px;border:1px solid var(--border);background:var(--background);color:var(--foreground);font:500 14px/1 Geist,ui-sans-serif,system-ui,sans-serif;cursor:pointer;transition:background-color .15s;outline:none}.ds-btn-o:hover{background:var(--muted)}.ds-btn-o:focus-visible{border-color:var(--ring);box-shadow: 0 0 0 3px color-mix(in oklch, var(--ring) 50%, transparent);}.ds-btn-o:active{transform:translateY(1px)}"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost-hover",
+      "description": "Icon buttons, row actions and the top-bar toggle.",
+      "html": "<button class=\"ds-btn-g\" aria-label=\"Previous month\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m15 18-6-6 6-6\"/></svg></button>",
+      "css": ".ds-btn-g{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:8px;border:1px solid transparent;background:transparent;color:var(--foreground);cursor:pointer;outline:none}.ds-btn-g:hover{background:var(--muted)}.ds-btn-g:focus-visible{border-color:var(--ring);box-shadow: 0 0 0 3px color-mix(in oklch, var(--ring) 50%, transparent);}"
+    },
+    {
+      "name": "Text Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "32px field with a hairline border and accent focus ring.",
+      "html": "<input class=\"ds-input\" placeholder=\"0.00\" inputmode=\"decimal\">",
+      "css": ".ds-input{height:32px;width:220px;padding:4px 10px;border-radius:8px;border:1px solid var(--input);background:transparent;color:var(--foreground);font:400 14px Geist,ui-sans-serif,system-ui,sans-serif;font-variant-numeric:tabular-nums;caret-color:var(--primary);outline:none;transition:border-color .15s,box-shadow .15s}.ds-input::placeholder{color:var(--muted-foreground)}.ds-input:focus-visible{border-color:var(--ring);box-shadow: 0 0 0 3px color-mix(in oklch, var(--ring) 50%, transparent);}"
+    },
+    {
+      "name": "Sidebar Navigation",
+      "kind": "nav",
+      "refersTo": "nav-item-active",
+      "description": "Rail nav; the active item takes the selected wash and indigo text.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Main\"><a href=\"#\" aria-current=\"page\">Dashboard</a><a href=\"#\">Expenses</a><a href=\"#\">Budgets</a><a href=\"#\">Insights</a></nav>",
+      "css": ".ds-nav{display:flex;flex-direction:column;gap:2px;width:220px;padding:8px;background:var(--sidebar);border-radius:11.2px}.ds-nav a{display:block;padding:8px;border-radius:6.4px;color:var(--sidebar-foreground);font:400 14px Geist,ui-sans-serif,system-ui,sans-serif;text-decoration:none;outline:none}.ds-nav a:hover{background:var(--sidebar-accent);color:var(--sidebar-accent-foreground)}.ds-nav a:focus-visible{box-shadow:0 0 0 2px var(--sidebar-ring)}.ds-nav a[aria-current=page]{background:var(--sidebar-accent);color:var(--primary);font-weight:500}"
+    },
+    {
+      "name": "Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "White container with a hairline edge and a hairline-ruled header.",
+      "html": "<section class=\"ds-card\"><header>Recent transactions</header><div class=\"ds-card-b\">Groceries <span>$42.10</span></div></section>",
+      "css": ".ds-card{width:320px;background:var(--card);color:var(--card-foreground);border:1px solid var(--border);border-radius:11.2px;overflow:hidden;font:400 14px Geist,ui-sans-serif,system-ui,sans-serif}.ds-card header{padding:12px 20px;border-bottom:1px solid var(--border);font-weight:500;font-size:16px}.ds-card-b{display:flex;justify-content:space-between;padding:16px 20px}.ds-card-b span{font-weight:500;font-variant-numeric:tabular-nums lining-nums}"
+    },
+    {
+      "name": "Summary Strip",
+      "kind": "custom",
+      "refersTo": "summary-cell",
+      "description": "Four hairline-divided stat cells on one surface.",
+      "html": "<dl class=\"ds-strip\"><div><dt>Spent</dt><dd>$1,284.50</dd></div><div><dt>Budgeted</dt><dd>$2,000.00</dd></div><div><dt>Over budget</dt><dd class=\"over\">$84.50</dd></div><div><dt>Month</dt><dd>Day 18</dd><dd class=\"d\">of 30 · 12 left</dd></div></dl>",
+      "css": ".ds-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin:0;background:var(--border);border:1px solid var(--border);border-radius:11.2px;overflow:hidden;font-family:Geist,ui-sans-serif,system-ui,sans-serif}.ds-strip>div{background:var(--card);padding:20px;display:flex;flex-direction:column;gap:4px}.ds-strip dt{color:var(--muted-foreground);font-size:14px}.ds-strip dd{margin:0;font-size:24px;font-weight:600;letter-spacing:-0.025em;color:var(--foreground)}.ds-strip dd.over{color:var(--destructive)}.ds-strip dd.d{font-size:12px;font-weight:400;letter-spacing:0;color:var(--muted-foreground);font-variant-numeric:tabular-nums}"
+    },
+    {
+      "name": "Budget Pace Bar",
+      "kind": "custom",
+      "refersTo": "pace-bar-track",
+      "description": "Signature: fill coloured by state, with the indigo pace line at today's point in the month.",
+      "html": "<div class=\"ds-pace\"><div class=\"row\"><span class=\"dot\" style=\"background:var(--cat-food,#eb6834)\"></span><b>Food</b><span class=\"amt\"><strong>$212</strong> / $300</span></div><div class=\"bar\" role=\"meter\" aria-label=\"Food\" aria-valuenow=\"212\" aria-valuemin=\"0\" aria-valuemax=\"300\"><div class=\"track\"><div class=\"fill\" style=\"width:70.6%\"></div></div><div class=\"line\" style=\"left:60%\"></div></div><p class=\"st\">Ahead of pace · $88 left</p></div>",
+      "css": ".ds-pace{width:360px;font:400 14px Geist,ui-sans-serif,system-ui,sans-serif;color:var(--foreground);display:flex;flex-direction:column;gap:10px}.ds-pace .row{display:flex;align-items:center;gap:12px}.ds-pace .dot{width:8px;height:8px;border-radius:9999px}.ds-pace b{flex:1;font-weight:500}.ds-pace .amt{color:var(--muted-foreground);font-variant-numeric:tabular-nums}.ds-pace .amt strong{color:var(--foreground);font-weight:500}.ds-pace .bar{position:relative;height:8px}.ds-pace .track{position:absolute;inset:0;background:var(--muted);border-radius:9999px;overflow:hidden}.ds-pace .fill{height:100%;border-radius:9999px;background:var(--warning);transition:width .5s ease-out}.ds-pace .line{position:absolute;top:-4px;bottom:-4px;width:2px;transform:translateX(-50%);background:var(--pace);border-radius:9999px;box-shadow:0 0 0 2px var(--background)}.ds-pace .st{margin:0;font-size:12px;font-weight:500;color:var(--warning-foreground);font-variant-numeric:tabular-nums}"
+    },
+    {
+      "name": "Sample Badge",
+      "kind": "chip",
+      "refersTo": "sample-badge",
+      "description": "Outlined pill labelling sample data on the landing.",
+      "html": "<span class=\"ds-sample\">Sample data</span>",
+      "css": ".ds-sample{display:inline-flex;align-items:center;padding:2px 10px;border:1px solid var(--border);border-radius:9999px;background:var(--background);color:var(--muted-foreground);font:400 12px Geist,ui-sans-serif,system-ui,sans-serif}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Monthly Statement",
+    "overview": "FundFlow reads like a calm, banking-grade statement of the month. Two cool neutral layers carry everything: a white content plane resting inside a slightly cooler grey sidebar. Ink is a navy-tinted near-black. A single indigo accent does four jobs only (primary action, current selection, focus, and the pace line), so wherever it appears, it means something. Everything else is hairlines, soft low shadows and an 8px radius.\n\nDensity is that of a working financial tool: 14px body text, 32px controls, 16 to 24px gutters, hairline-divided lists and summary cells. Numbers are the content. Amounts are exact, set in Geist with tabular figures wherever they sit in a column, and they are never decorative. Colour that is not the accent or a neutral is either state (green on track, amber ahead of pace, red over) or category identity (a small swatch beside a category name). The system rejects the colourful, gamified budgeting-app look and the old pink-and-purple gradients outright.\n\nThe one signature is the pace line: a 2px indigo hairline drawn across every variable budget bar at today's point in the month, ringed in the page colour so it reads as a mark in the bar rather than part of the fill. Spending left of it is on pace; a fill that runs past it turns amber before it ever turns red. The landing page uses the same world and the same components with labelled sample data, and its one authored motion is those bars filling in toward an already-placed pace line.",
+    "keyCharacteristics": [
+      "Two cool neutral planes (white content, cooler grey sidebar), navy-tinted ink, full light and dark themes in OKLCH.",
+      "One indigo accent, reserved for primary action, current selection, focus and the pace line.",
+      "Green, amber and red appear only as state; category hues only as identity swatches.",
+      "Geist as the only face; tabular figures for amounts in columns.",
+      "1px hairlines, two soft shadows, 8px controls and 11px containers.",
+      "The pace line on every variable budget bar."
+    ],
+    "rules": [
+      {
+        "name": "The One Indigo Rule",
+        "body": "The accent is reserved for the primary action, the current selection, focus and the pace line. Nothing else is indigo, and there is one primary button per view.",
+        "section": "colors"
+      },
+      {
+        "name": "The State Only Rule",
+        "body": "Green, amber and red appear only where they carry state: on track, ahead of pace, over. A neutral fill (ink at 70%) is the on-track default; it is not green.",
+        "section": "colors"
+      },
+      {
+        "name": "The Swatch Beside a Name Rule",
+        "body": "Category hues appear only as identity swatches beside the category name, drawn from the validated eight-slot palette. They never fill a bar, tint a row or stand alone.",
+        "section": "colors"
+      },
+      {
+        "name": "The Ordinal Ink Rule",
+        "body": "Every categorical hue belongs to a category, so non-category series (Income and Spent) are two shades of one ink hue, never two categorical colours.",
+        "section": "colors"
+      },
+      {
+        "name": "The Tabular Column Rule",
+        "body": "Every amount that sits in a column, row or status line uses tabular, lining figures (the `num` utility or `tabular-nums`) so digits line up. Large standalone stat values keep proportional figures.",
+        "section": "typography"
+      },
+      {
+        "name": "The One Face Rule",
+        "body": "Geist is the only typeface. Hierarchy comes from size and weight (400, 500, 600), never from a second family, all-caps or letter-spaced labels.",
+        "section": "typography"
+      },
+      {
+        "name": "The Hairline First Rule",
+        "body": "Separation comes from 1px hairlines and tonal planes. Reach for Soft only to seat a plane, and for Lift only on something that genuinely floats.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do keep one primary button per view, and use the indigo accent only for that action, the current selection, focus and the pace line.",
+      "Do colour a budget only by state: ink at 70% on track, amber ahead of pace, red over, with the state repeated in a 12px text line under the bar.",
+      "Do draw the pace line on every variable budget bar, and omit it for fixed bills, which read \"Fixed bill, flagged only if over\".",
+      "Do set amounts in columns and status lines with tabular figures; keep large stat values proportional.",
+      "Do pair every chart with a screen-reader table and a labelled figure.",
+      "Do label sample data as sample wherever product fragments appear outside the signed-in app.",
+      "Do separate with 1px hairlines and tonal planes before reaching for a shadow."
+    ],
+    "donts": [
+      "Don't use a category hue anywhere except as a swatch beside that category's name.",
+      "Don't give a non-category series (Income, Spent) a categorical colour; use the ordinal ink pair.",
+      "Don't use green, amber or red decoratively or as an accent.",
+      "Don't invent social proof: no testimonials, user counts, ratings, press or savings figures.",
+      "Don't bring back gradients, the pink-and-purple palette, confetti or other gamified budgeting-app flourishes.",
+      "Don't add a second typeface, all-caps labels or letter-spaced eyebrows above headings.",
+      "Don't animate beyond the landing's bar fill-in and short state transitions, and honour reduced motion."
+    ]
+  }
+}
