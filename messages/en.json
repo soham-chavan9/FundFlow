@@ -40,7 +40,8 @@
     "themeDark": "Dark",
     "themeSystem": "System",
     "language": "Language",
-    "signOut": "Sign out"
+    "signOut": "Sign out",
+    "menu": "Menu"
   },
   "auth": {
     "loginTitle": "Sign in to FundFlow",
@@ -86,7 +87,17 @@
     "title": "Overview",
     "emptyTitle": "Your month starts here",
     "emptyBody": "Add an expense or set a budget, and this page fills in with where your money is going and how you’re pacing.",
-    "setBudget": "Set a budget"
+    "setBudget": "Set a budget",
+    "overTitle": "{count, plural, one {One category is over budget} other {# categories are over budget}}",
+    "overItem": "{category} +{amount}",
+    "reviewBudgets": "Review budgets",
+    "budgetsHeading": "Budgets",
+    "manage": "Manage",
+    "noBudgets": "No budgets for {month} yet. Set a limit per category to see how your spending is pacing.",
+    "trendHeading": "Spending, last 6 months",
+    "recentHeading": "Recent expenses",
+    "viewAll": "View all",
+    "noRecent": "No expenses in {month} yet."
   },
   "categories": {
     "food": "Food",
@@ -158,6 +169,45 @@
   "budgets": {
     "overspendTitle": "{category} is {amount} over budget",
     "overspendBody": "{done}. The {month} budget is {limit}.",
-    "view": "View budgets"
+    "view": "View budgets",
+    "title": "Budgets",
+    "set": "Set budget",
+    "setFor": "Set a budget for {category}",
+    "editFor": "Edit the {category} budget",
+    "limitFor": "Monthly limit for {category}",
+    "remove": "Remove",
+    "saved": "{category} budget saved",
+    "removed": "{category} budget removed",
+    "left": "{amount} left",
+    "aheadLeft": "Ahead of pace · {amount} left",
+    "overBy": "Over by {amount}",
+    "of": "of",
+    "meter": "{category}: {spent} of {limit} spent. {status}.",
+    "copyTitle": "Start from last month",
+    "copyBody": "{count, plural, one {Copy the budget you set for {month}.} other {Copy the # budgets you set for {month}.}}",
+    "copyAction": "Copy budgets",
+    "copied": "{count, plural, =0 {Nothing new to copy} one {Copied # budget} other {Copied # budgets}}",
+    "budgetedHeading": "Budgets for {month}",
+    "paceLegend": "The line marks today",
+    "emptyTitle": "No budgets yet",
+    "emptyBody": "Set a monthly limit for the categories you want to watch. Each bar then shows how your spending is pacing.",
+    "notBudgeted": "Not budgeted",
+    "notBudgetedHint": "Spending here isn’t measured against a limit.",
+    "spentAmount": "{amount} spent"
+  },
+  "summary": {
+    "spent": "Spent",
+    "budgeted": "Budgeted",
+    "left": "Left",
+    "overBudget": "Over budget",
+    "month": "Month",
+    "day": "Day {day}",
+    "dayDetail": "of {days} · {left, plural, one {# day} other {# days}} left",
+    "closed": "Closed",
+    "notStarted": "Not started",
+    "daysInMonth": "{days} days",
+    "outsideBudgets": "{amount} outside budgets",
+    "noBudgets": "No budgets set",
+    "ofBudgeted": "of {amount} budgeted"
   }
 }

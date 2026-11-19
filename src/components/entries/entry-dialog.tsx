@@ -61,6 +61,7 @@ export function EntryDialog({
   onOpenChange,
 }: EntryDialogProps) {
   const t = useTranslations(kind === "expense" ? "expenses" : "income");
+  const tCommon = useTranslations("common");
   const [internalOpen, setInternalOpen] = useState(false);
   const isOpen = open ?? internalOpen;
   const setOpen = onOpenChange ?? setInternalOpen;
@@ -68,7 +69,7 @@ export function EntryDialog({
   return (
     <Dialog open={isOpen} onOpenChange={setOpen}>
       {trigger ? <DialogTrigger asChild>{trigger}</DialogTrigger> : null}
-      <DialogContent className="sm:max-w-md">
+      <DialogContent className="sm:max-w-md" closeLabel={tCommon("close")}>
         <DialogHeader>
           <DialogTitle>{entry ? t("editTitle") : t("addTitle")}</DialogTitle>
           <DialogDescription>{t("dialogDescription")}</DialogDescription>
