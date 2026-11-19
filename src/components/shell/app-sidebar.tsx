@@ -53,6 +53,7 @@ function NavLinks({ items }: { items: NavItem[] }) {
 
 export function AppSidebar({ user }: { user: CurrentUser }) {
   const t = useTranslations("nav");
+  const tShell = useTranslations("shell");
   return (
     <Sidebar variant="inset" collapsible="icon">
       <SidebarHeader className="h-14 justify-center px-3">
@@ -81,7 +82,7 @@ export function AppSidebar({ user }: { user: CurrentUser }) {
         <NavLinks items={[SETTINGS_NAV]} />
         <UserMenu user={user} />
       </SidebarFooter>
-      <SidebarRail />
+      <SidebarRail label={tShell("toggleSidebar")} />
     </Sidebar>
   );
 }
