@@ -13,12 +13,18 @@ export const getCurrentUser = cache(async (): Promise<CurrentUser | null> => {
   const session = await readSession();
   if (!session) return null;
   const user = await findUserById(session.userId);
-  return user ? toCurrentUser(user) : null;
+  // A token from before the account's last password change (or a deleted account) is stale.
+  if (!user || (user.sessionVersion ?? 0) !== session.version) return null;
+  return toCurrentUser(user);
 });
 
-/** For pages and Server Actions: redirects to /login when signed out. */
+/**
+ * For pages and Server Actions: sends signed-out visitors to /login. `expired`
+ * tells the proxy to drop a cookie that is validly signed but stale, so it
+ * doesn't bounce the visitor straight back here.
+ */
 export async function requireUser(): Promise<CurrentUser> {
   const user = await getCurrentUser();
-  if (!user) redirect("/login");
+  if (!user) redirect("/login?expired=1");
   return user;
 }

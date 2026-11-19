@@ -1,8 +1,10 @@
 import { SignJWT, jwtVerify } from "jose";
 
 /**
- * Session tokens: HS256 JWTs carrying only the user id. Kept free of
- * `server-only` and `next/headers` so proxy.ts and unit tests can use it.
+ * Session tokens: HS256 JWTs carrying the user id and the account's session
+ * version. Bumping the version on the account (password change, sign out
+ * everywhere) makes every older token stale. Kept free of `server-only` and
+ * `next/headers` so proxy.ts and unit tests can use it.
  */
 
 export const SESSION_COOKIE = "ff_session";
@@ -15,11 +17,18 @@ function key(secret: string | undefined) {
   return new TextEncoder().encode(secret);
 }
 
+export interface SessionClaims {
+  userId: string;
+  /** Matches `UserDoc.sessionVersion`; tokens from before versioning count as 0. */
+  version: number;
+}
+
 export async function signSessionToken(
   userId: string,
   secret: string | undefined = process.env.AUTH_SECRET,
+  version = 0,
 ): Promise<string> {
-  return new SignJWT({})
+  return new SignJWT({ sv: version })
     .setProtectedHeader({ alg: "HS256" })
     .setSubject(userId)
     .setIssuedAt()
@@ -30,11 +39,13 @@ export async function signSessionToken(
 export async function verifySessionToken(
   token: string | undefined,
   secret: string | undefined = process.env.AUTH_SECRET,
-): Promise<{ userId: string } | null> {
+): Promise<SessionClaims | null> {
   if (!token) return null;
   try {
     const { payload } = await jwtVerify(token, key(secret), { algorithms: ["HS256"] });
-    return typeof payload.sub === "string" && payload.sub ? { userId: payload.sub } : null;
+    if (typeof payload.sub !== "string" || !payload.sub) return null;
+    const version = Number.isInteger(payload.sv) ? (payload.sv as number) : 0;
+    return { userId: payload.sub, version };
   } catch {
     return null;
   }
