@@ -12,6 +12,7 @@ import { getLocale, getTranslations } from "next-intl/server";
 import { getCurrentUser } from "@/lib/auth/dal";
 import { Wordmark } from "@/components/brand";
 import {
+  SampleBadge,
   AddExpenseFragment,
   AssistantFragment,
   InsightsFragment,
@@ -50,7 +51,10 @@ function Feature({
           {body}
         </p>
       </div>
-      <div className={flip ? "lg:order-1 lg:col-span-7" : "lg:col-span-7"}>{children}</div>
+      <div className={flip ? "lg:order-1 lg:col-span-7" : "lg:col-span-7"}>
+        {children}
+        <SampleBadge className="mt-3" />
+      </div>
     </section>
   );
 }
@@ -172,7 +176,7 @@ export default async function Home({ searchParams }: PageProps<"/">) {
             <ul className="mt-8 grid gap-x-8 gap-y-5 sm:grid-cols-2 lg:grid-cols-3">
               {also.map(({ icon: Icon, label }) => (
                 <li key={label} className="flex items-center gap-3">
-                  <Icon className="text-primary size-4 shrink-0" aria-hidden />
+                  <Icon className="text-muted-foreground size-4 shrink-0" aria-hidden />
                   <span>{label}</span>
                 </li>
               ))}

@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { cn } from "cn";
-import type { Category } from "@/lib/categories";
+import { isFixedCategory, type Category } from "@/lib/categories";
 import type { BudgetPace } from "@/lib/finance";
 import { formatMoney, type Currency } from "@/lib/money";
 import { CategoryDot } from "@/components/entries/category-dot";
@@ -41,7 +41,9 @@ export async function BudgetList({
             ? t("budgets.overBy", { amount: money(-pace.remainingCents) })
             : pace.state === "ahead"
               ? t("budgets.aheadLeft", { amount: money(pace.remainingCents) })
-              : t("budgets.left", { amount: money(pace.remainingCents) });
+              : isFixedCategory(category)
+                ? t("budgets.fixedLeft", { amount: money(pace.remainingCents) })
+                : t("budgets.left", { amount: money(pace.remainingCents) });
         return (
           <li key={category} className="flex flex-col gap-2.5 py-4 first:pt-0 last:pb-0">
             <div className="flex items-center gap-3">
@@ -64,6 +66,7 @@ export async function BudgetList({
             </div>
             <BudgetPaceBar
               pace={pace}
+              name={name}
               label={t("budgets.meter", {
                 category: name,
                 spent: money(pace.spentCents),

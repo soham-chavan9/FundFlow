@@ -282,7 +282,7 @@ async function MonthView({
                   <TableCell className="hidden md:table-cell" aria-hidden>
                     <div className="bg-muted h-2 w-full overflow-hidden rounded-full">
                       <div
-                        className="bg-chart-spend h-full rounded-full"
+                        className="bg-chart-ink h-full rounded-full"
                         style={{ width: `${shareOf(row.spentCents, maxSpent) * 100}%` }}
                       />
                     </div>
@@ -392,25 +392,28 @@ async function FlowTable({
 }) {
   const t = await getTranslations();
   return (
-    <table className="sr-only">
-      <caption>{caption}</caption>
-      <thead>
-        <tr>
-          <th scope="col">{t("summary.month")}</th>
-          <th scope="col">{t("insights.income")}</th>
-          <th scope="col">{t("summary.spent")}</th>
-        </tr>
-      </thead>
-      <tbody>
-        {data.map((p) => (
-          <tr key={p.month}>
-            <th scope="row">{p.fullLabel}</th>
-            <td>{formatMoney(p.income, currency, locale)}</td>
-            <td>{formatMoney(p.spent, currency, locale)}</td>
+    // sr-only on a wrapper: a table ignores the 1px clip and stretches the page.
+    <div className="sr-only">
+      <table>
+        <caption>{caption}</caption>
+        <thead>
+          <tr>
+            <th scope="col">{t("summary.month")}</th>
+            <th scope="col">{t("insights.income")}</th>
+            <th scope="col">{t("summary.spent")}</th>
           </tr>
-        ))}
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          {data.map((p) => (
+            <tr key={p.month}>
+              <th scope="row">{p.fullLabel}</th>
+              <td>{formatMoney(p.income, currency, locale)}</td>
+              <td>{formatMoney(p.spent, currency, locale)}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 }
 

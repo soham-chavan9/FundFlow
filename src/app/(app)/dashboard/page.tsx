@@ -200,23 +200,26 @@ export default async function DashboardPage({ searchParams }: PageProps<"/dashbo
                 seriesName={t("summary.spent")}
                 label={t("dashboard.trendHeading")}
               />
-              <table className="sr-only">
-                <caption>{t("dashboard.trendHeading")}</caption>
-                <thead>
-                  <tr>
-                    <th scope="col">{t("summary.month")}</th>
-                    <th scope="col">{t("summary.spent")}</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {trendData.map((p) => (
-                    <tr key={p.month}>
-                      <th scope="row">{p.fullLabel}</th>
-                      <td>{money(p.cents)}</td>
+              {/* sr-only on a wrapper: a table ignores the 1px clip and stretches the page. */}
+              <div className="sr-only">
+                <table>
+                  <caption>{t("dashboard.trendHeading")}</caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">{t("summary.month")}</th>
+                      <th scope="col">{t("summary.spent")}</th>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
+                  </thead>
+                  <tbody>
+                    {trendData.map((p) => (
+                      <tr key={p.month}>
+                        <th scope="row">{p.fullLabel}</th>
+                        <td>{money(p.cents)}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
           </section>
         </div>

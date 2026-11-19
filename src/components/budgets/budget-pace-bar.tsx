@@ -9,11 +9,14 @@ import type { BudgetPace } from "@/lib/finance";
  */
 export function BudgetPaceBar({
   pace,
+  name,
   label,
   className,
 }: {
   pace: BudgetPace;
-  /** Screen-reader text, e.g. "Food: $120 of $300, ahead of pace". */
+  /** The meter's accessible name, e.g. "Food". */
+  name: string;
+  /** Screen-reader value text, e.g. "Food: $120 of $300 spent. Ahead of pace." */
   label: string;
   className?: string;
 }) {
@@ -22,6 +25,7 @@ export function BudgetPaceBar({
   return (
     <div
       role="meter"
+      aria-label={name}
       aria-valuemin={0}
       aria-valuemax={pace.limitCents}
       aria-valuenow={Math.min(pace.spentCents, pace.limitCents)}
@@ -32,7 +36,7 @@ export function BudgetPaceBar({
         <div
           className={cn(
             "h-full rounded-full transition-[width] duration-500 ease-out motion-reduce:transition-none",
-            pace.state === "onTrack" && "bg-foreground/55",
+            pace.state === "onTrack" && "bg-foreground/70",
             pace.state === "ahead" && "bg-warning",
             pace.state === "over" && "bg-destructive",
           )}

@@ -16,7 +16,10 @@ export default defineConfig({
     { name: "mobile", use: { ...devices["Pixel 7"] } },
   ],
   webServer: {
-    command: `npm run build && npm run start -- -p ${PORT}`,
+    // CI builds once in its own step; locally, build first.
+    command: process.env.CI
+      ? `npm run start -- -p ${PORT}`
+      : `npm run build && npm run start -- -p ${PORT}`,
     url: `http://localhost:${PORT}`,
     reuseExistingServer: !process.env.CI,
     timeout: 240_000,
