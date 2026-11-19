@@ -283,5 +283,26 @@
     "deleteBody": "Tu cuenta y todos sus datos se eliminarán para siempre. No se puede deshacer.",
     "confirmWithPassword": "Escribe tu contraseña para confirmar",
     "deleteForever": "Eliminar para siempre"
+  },
+  "assistant": {
+    "title": "Asistente",
+    "name": "Asistente de FundFlow",
+    "you": "Tú",
+    "introTitle": "Pregunta por tu dinero",
+    "introBody": "Las preguntas sobre tus gastos, ingresos y presupuestos se responden con tus últimos tres meses en FundFlow.",
+    "suggestion1": "¿Cuánto he gastado en comida este mes?",
+    "suggestion2": "¿Qué presupuesto corre más riesgo?",
+    "suggestion3": "¿Cómo va este mes comparado con el anterior?",
+    "inputLabel": "Tu pregunta",
+    "placeholder": "Pregunta por tus gastos…",
+    "send": "Enviar",
+    "stop": "Detener",
+    "thinking": "Pensando…",
+    "failed": "El asistente no pudo responder ahora. Vuelve a intentarlo.",
+    "rateLimited": "Son muchas preguntas en poco tiempo. Vuelve a intentarlo en unos minutos.",
+    "signedOut": "Tu sesión terminó. Vuelve a iniciar sesión para seguir preguntando.",
+    "privacy": "Las respuestas usan los totales de tus últimos tres meses, que se envían a Google Gemini. Las conversaciones no se guardan.",
+    "notConfiguredTitle": "El asistente no está configurado",
+    "notConfiguredBody": "Este servidor no tiene una clave de la API de Gemini, así que el asistente está desactivado. Añade GEMINI_API_KEY al entorno para activarlo."
   }
 }
