@@ -74,6 +74,15 @@ describe("budgetPace", () => {
     expect(budgetPace(30_000, 30_000, { days: 30, elapsed: 30 }).state).toBe("onTrack");
   });
 
+  it("a fixed bill is never ahead of pace, only over", () => {
+    const rent = budgetPace(145_000, 150_000, { days: 30, elapsed: 1 }, { fixed: true });
+    expect(rent.state).toBe("onTrack");
+    expect(rent.paceRatio).toBe(1);
+    expect(budgetPace(155_000, 150_000, { days: 30, elapsed: 1 }, { fixed: true }).state).toBe(
+      "over",
+    );
+  });
+
   it("a finished month cannot be ahead, only over", () => {
     expect(budgetPace(29_999, 30_000, { days: 30, elapsed: 30 }).state).toBe("onTrack");
   });
