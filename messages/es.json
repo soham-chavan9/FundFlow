@@ -209,5 +209,50 @@
     "outsideBudgets": "{amount} fuera de presupuesto",
     "noBudgets": "Sin presupuestos",
     "ofBudgeted": "de {amount} presupuestados"
+  },
+  "insights": {
+    "title": "Análisis",
+    "period": "Periodo",
+    "viewMonth": "Mes",
+    "viewYear": "Año",
+    "previousYear": "Año anterior",
+    "nextYear": "Año siguiente",
+    "income": "Ingresos",
+    "net": "Neto",
+    "savingsRate": "Tasa de ahorro",
+    "whereHeading": "A dónde fue tu dinero en {month}",
+    "totalChange": "{change} frente a {month}",
+    "noSpendTitle": "Sin gastos en {month}",
+    "noSpendBody": "Añade gastos para ver cómo se reparten por categoría.",
+    "share": "Proporción",
+    "budget": "Presupuesto",
+    "vsMonth": "vs. {month}",
+    "total": "Total",
+    "new": "Nuevo",
+    "flowHeading": "Ingresos y gastos de los últimos 6 meses",
+    "flowYearHeading": "Ingresos y gastos en {year}",
+    "yearSavingsRate": "Ahorraste el {rate} de tus ingresos",
+    "byMonthHeading": "{year} mes a mes",
+    "avgSpend": "Gasto mensual medio"
+  },
+  "shopping": {
+    "title": "Lista de compras",
+    "addLabel": "Añadir un artículo",
+    "addPlaceholder": "Añade un artículo, p. ej., Leche",
+    "add": "Añadir",
+    "toBuy": "Por comprar",
+    "remaining": "{count, plural, =0 {No queda nada} one {Queda #} other {Quedan #}}",
+    "allBought": "Ya está todo comprado.",
+    "completedHeading": "Comprado",
+    "clearCompleted": "Quitar ({count})",
+    "cleared": "{count, plural, =0 {No hay nada que quitar} one {Se quitó # artículo} other {Se quitaron # artículos}}",
+    "deleteItem": "Eliminar {name}",
+    "emptyTitle": "Tu lista está vacía",
+    "emptyBody": "Añade lo que necesitas comprar y márcalo a medida que lo compras.",
+    "full": "Tu lista está llena. Quita primero algunos artículos comprados."
+  },
+  "errors": {
+    "title": "No se pudo cargar esta página",
+    "body": "Algo falló de nuestro lado. Vuelve a intentarlo en un momento."
   }
 }
