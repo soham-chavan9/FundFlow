@@ -12,6 +12,8 @@ export interface UserDoc {
   currency: Currency;
   locale: Locale;
   createdAt: Date;
+  /** Bumped to invalidate every existing session (e.g. on password change). Missing means 0. */
+  sessionVersion?: number;
 }
 
 export interface ExpenseDoc {
