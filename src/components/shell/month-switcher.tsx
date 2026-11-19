@@ -4,7 +4,8 @@ import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
-import { monthRange, shiftMonth } from "@/lib/dates";
+import { shiftMonth } from "@/lib/dates";
+import { formatMonth } from "@/lib/format";
 import { Button } from "@/components/ui/button";
 
 /** Previous / current / next month control. The month lives in the URL (?month=YYYY-MM). */
@@ -22,14 +23,6 @@ export function MonthSwitcher({ month, currentMonth }: { month: string; currentM
     return qs ? `${pathname}?${qs}` : pathname;
   };
 
-  const raw = new Intl.DateTimeFormat(locale, {
-    month: "long",
-    year: "numeric",
-    timeZone: "UTC",
-  }).format(monthRange(month).start);
-  // Sentence case: "octubre de 2026" -> "Octubre de 2026" (CSS capitalize would hit every word).
-  const label = raw.charAt(0).toLocaleUpperCase(locale) + raw.slice(1);
-
   return (
     <div className="flex items-center gap-1">
       <Button asChild variant="ghost" size="icon-sm" aria-label={t("previousMonth")}>
@@ -37,8 +30,14 @@ export function MonthSwitcher({ month, currentMonth }: { month: string; currentM
           <ChevronLeft />
         </Link>
       </Button>
-      <span className="min-w-36 text-center text-sm font-medium tabular-nums" aria-live="polite">
-        {label}
+      <span
+        className="min-w-20 text-center text-sm font-medium tabular-nums sm:min-w-36"
+        aria-live="polite"
+      >
+        <span className="sm:hidden">
+          {formatMonth(month, locale, { standalone: true, short: true })}
+        </span>
+        <span className="max-sm:hidden">{formatMonth(month, locale, { standalone: true })}</span>
       </span>
       <Button asChild variant="ghost" size="icon-sm" aria-label={t("nextMonth")}>
         <Link href={hrefFor(shiftMonth(month, 1))} scroll={false}>
